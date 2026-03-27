@@ -1,0 +1,102 @@
+<lccdd>
+<!-- #==========================================================================
+     #  AIDA Detector description implementation 
+     #==========================================================================
+     # Copyright (C) Organisation europeenne pour la Recherche nucleaire (CERN)
+     # All rights reserved.
+     #
+     # For the licensing terms see $DD4hepINSTALL/LICENSE.
+     # For the list of contributors see $DD4hepINSTALL/doc/CREDITS.
+     #
+     #==========================================================================
+-->
+  <info name="simplecalo1"
+    title="A simple sandwich calorimeter simulation"
+    author="Lorenzo Pezzotti"
+    url="None"
+    status="development"
+    version="0.1">
+    <comment></comment>
+  </info>
+
+  <define>
+    <constant name="world_side"   value="20*m"/>
+    <constant name="world_x"      value="world_side/2"/>
+    <constant name="world_y"      value="world_side/2"/>
+    <constant name="world_z"      value="world_side/2"/>
+    <constant name="CaloX"        value="1*m"/>
+    <constant name="CaloY"        value="CaloX"/>
+    <constant name="CaloZ"        value="2*m"/>
+    <constant name="CaloLayerX"   value="CaloX"/>
+    <constant name="CaloLayerY"   value="CaloY"/>
+    <constant name="CaloLayerZ"   value="10*cm"/>
+    <constant name="AbsLayerX"    value="CaloX"/>
+    <constant name="AbsLayerY"    value="CaloY"/>
+    <constant name="AbsLayerZ"    value="9*cm"/>
+    <constant name="SensLayerX"   value="CaloX"/>
+    <constant name="SensLayerY"   value="CaloY"/>
+    <constant name="SensLayerZ"   value="1.0*cm"/>
+    <constant name="LayersNumber" value="20"/>    
+  </define>
+
+  <includes>
+    <gdmlFile  ref="elements.xml"/>
+  </includes>
+  
+  <materials>
+    <material name="Vacuum">
+      <D type="density" unit="g/cm3" value="0.0000000001" />
+      <fraction n="0.754" ref="N"/>
+      <fraction n="0.234" ref="O"/>
+      <fraction n="0.012" ref="Ar"/>
+    </material>
+    <material name="Air">
+      <D type="density" unit="g/cm3" value="0.0012"/>
+      <fraction n="0.754" ref="N"/>
+      <fraction n="0.234" ref="O"/>
+      <fraction n="0.012" ref="Ar"/>
+    </material>
+    <material name="Brass">
+      <D type="density" unit="g/cm3" value="8.44" />
+      <fraction n="0.7" ref="Cu" />
+      <fraction n="0.3" ref="Zn" />
+    </material>
+  </materials>
+
+  <!-- Define visualization attributes. Vis attributes contains an
+       alpha value for transparency, r-g-b for color, show daughters possibility true/false
+       and visibile (or invisible) true/false.
+  -->
+  <display>
+    <vis name="CaloVis" alpha="1.0" r="0.0" g="1.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="CaloLayerVis" alpha="1.0" r="0.0" g="0.0" b="1.0" showDaughters="true" visible="true"/>
+    <vis name="AbsLayerVis" alpha="1.0" r="1.0" g="0.624" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="SensLayerVis" alpha="1.0" r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
+  </display>
+
+  <!-- Define the detector. A detector has a name, type to be returned in .cpp file with 
+       DECLARE_DETELEMENT(type,create_detector_c++method), vis attributes (optional),
+       and sensitive-detector (true/false), if sensitive="true" a readout must the passed.
+       If a detector contains sub-detectors, their information must be included as below.
+  -->
+  <detectors>
+    <detector name="simplecalo1" type="simplecalo1" vis="CaloVis" id ="0" readout="simplecaloRO">
+    <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_BARREL"/>
+    <dimensions x="CaloX" y="CaloY" z="CaloZ"/>
+      <calo material="Air" vis="CaloVis"/>
+      <caloLayer material="Air" x="CaloLayerX" y="CaloLayerY" z="CaloLayerZ" vis="CaloLayerVis"/>
+      <absLayer material="Brass" x="AbsLayerX" y="AbsLayerY" z="AbsLayerZ" vis="AbsLayerVis"/>
+      <sensLayer material="Silicon" x="SensLayerX" y="SensLayerY" z="SensLayerZ" sensitive="true" vis="SensLayerVis"/>
+    </detector>
+  </detectors>
+  <readouts>
+    <readout name="simplecaloRO">
+      <segmentation type="CartesianGridXY" 
+       grid_size_x="10*cm" 
+       grid_size_y="10*cm"/>
+      <!-- NO SPACES BETWEEN ID DESCRIPTORS!!! -->
+      <id>calolayer:5,abslayer:1,x:-10,y:-10</id>
+    </readout>
+  </readouts> 
+
+</lccdd>

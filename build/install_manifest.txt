@@ -1,0 +1,4 @@
+/eos/user/f/faguo/FCCSW/DD4hep_Grainita/install/lib64/libDD4hepTutorials.components
+/eos/user/f/faguo/FCCSW/DD4hep_Grainita/install/lib64/libDD4hepTutorials.so
+/eos/user/f/faguo/FCCSW/DD4hep_Grainita/install/lib64/libsdaction.components
+/eos/user/f/faguo/FCCSW/DD4hep_Grainita/install/lib64/libsdaction.so
