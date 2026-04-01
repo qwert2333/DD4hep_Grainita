@@ -53,10 +53,10 @@ RM = /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-o
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /eos/user/f/faguo/FCCSW/DD4hep_Grainita
+CMAKE_SOURCE_DIR = /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build
+CMAKE_BINARY_DIR = /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DD4hepTutorials.dir/depend.make
@@ -72,28 +72,28 @@ include CMakeFiles/DD4hepTutorials.dir/flags.make
 CMakeFiles/DD4hepTutorials.dir/codegen:
 .PHONY : CMakeFiles/DD4hepTutorials.dir/codegen
 
-CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o: CMakeFiles/DD4hepTutorials.dir/flags.make
-CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o: /eos/user/f/faguo/FCCSW/DD4hep_Grainita/simplecalo1/src/simplecalo1.cpp
-CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o: CMakeFiles/DD4hepTutorials.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o"
-	/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o -MF CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o.d -o CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/simplecalo1/src/simplecalo1.cpp
+CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o: CMakeFiles/DD4hepTutorials.dir/flags.make
+CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o: /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp
+CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o: CMakeFiles/DD4hepTutorials.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o"
+	/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o -MF CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o.d -o CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp
 
-CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.i"
-	/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /eos/user/f/faguo/FCCSW/DD4hep_Grainita/simplecalo1/src/simplecalo1.cpp > CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.i
+CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.i"
+	/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp > CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.i
 
-CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.s"
-	/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /eos/user/f/faguo/FCCSW/DD4hep_Grainita/simplecalo1/src/simplecalo1.cpp -o CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.s
+CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.s"
+	/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp -o CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.s
 
 # Object files for target DD4hepTutorials
 DD4hepTutorials_OBJECTS = \
-"CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o"
+"CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o"
 
 # External object files for target DD4hepTutorials
 DD4hepTutorials_EXTERNAL_OBJECTS =
 
-lib/libDD4hepTutorials.so: CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o
+lib/libDD4hepTutorials.so: CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o
 lib/libDD4hepTutorials.so: CMakeFiles/DD4hepTutorials.dir/build.make
 lib/libDD4hepTutorials.so: /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/dd4hep/1.35-6qzj4d/lib/libDDCond.so.1.35
 lib/libDD4hepTutorials.so: /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/dd4hep/1.35-6qzj4d/lib/libDDCore.so.1.35
@@ -114,7 +114,7 @@ lib/libDD4hepTutorials.so: /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-
 lib/libDD4hepTutorials.so: /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/root/6.38.00-lovp3j/lib/root/libCore.so.6.38.00
 lib/libDD4hepTutorials.so: /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/xerces-c/3.3.0-kq5wkb/lib/libxerces-c.so
 lib/libDD4hepTutorials.so: CMakeFiles/DD4hepTutorials.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library lib/libDD4hepTutorials.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library lib/libDD4hepTutorials.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DD4hepTutorials.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +126,6 @@ CMakeFiles/DD4hepTutorials.dir/clean:
 .PHONY : CMakeFiles/DD4hepTutorials.dir/clean
 
 CMakeFiles/DD4hepTutorials.dir/depend:
-	cd /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /eos/user/f/faguo/FCCSW/DD4hep_Grainita /eos/user/f/faguo/FCCSW/DD4hep_Grainita /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/DD4hepTutorials.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/DD4hepTutorials.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/DD4hepTutorials.dir/depend
 

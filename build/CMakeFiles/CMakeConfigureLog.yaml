@@ -7,7 +7,7 @@ events:
       - "/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 5.14.0-611.24.1.el9_7.x86_64 - x86_64
+      The system is: Linux - 5.14.0-611.26.1.el9_7.x86_64 - x86_64
   -
     kind: "message-v1"
     backtrace:
@@ -28,7 +28,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/3.31.9/CompilerIdC/a.out
+        /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/3.31.9/CompilerIdC/a.out
       
   -
     kind: "message-v1"
@@ -50,7 +50,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/3.31.9/CompilerIdCXX/a.out
+        /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/3.31.9/CompilerIdCXX/a.out
       
   -
     kind: "try_compile-v1"
@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1rDbWv"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1rDbWv"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZAmmzG"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZAmmzG"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -72,13 +72,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1rDbWv'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZAmmzG'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_c8585/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_c8585.dir/build.make CMakeFiles/cmTC_c8585.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1rDbWv'
-        Building C object CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc   -v -o CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_92d73/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_92d73.dir/build.make CMakeFiles/cmTC_92d73.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZAmmzG'
+        Building C object CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc   -v -o CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c
         Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs
         COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc
         Target: x86_64-pc-linux-gnu
@@ -86,8 +86,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (Spack GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c8585.dir/'
-         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c8585.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/faguo/ccHXHkjM.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_92d73.dir/'
+         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_92d73.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/faguo/cc8NPyRO.s
         GNU C17 (Spack GCC) version 14.2.0 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -108,14 +108,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: b9cd5ad9c813498010260246cca752e6
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c8585.dir/'
-         as -v --64 -o CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o /tmp/faguo/ccHXHkjM.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_92d73.dir/'
+         as -v --64 -o CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o /tmp/faguo/cc8NPyRO.s
         GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1
         COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_c8585
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8585.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_92d73
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92d73.dir/link.txt --verbose=1
         Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs
         COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc
         COLLECT_LTO_WRAPPER=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper
@@ -126,14 +126,14 @@ events:
         gcc version 14.2.0 (Spack GCC) 
         COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8585' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c8585.'
-         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccQrvMaY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c8585 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_92d73' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_92d73.'
+         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccC5U4mF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_92d73 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
         collect2 version 14.2.0
-        /usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccQrvMaY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c8585 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
+        /usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccC5U4mF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_92d73 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
         GNU ld version 2.35.2-67.el9_7.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8585' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c8585.'
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc  -v -Wl,-v CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o -o cmTC_c8585
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1rDbWv'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_92d73' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_92d73.'
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc  -v -Wl,-v CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o -o cmTC_92d73
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZAmmzG'
         
       exitCode: 0
   -
@@ -184,13 +184,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1rDbWv']
+        ignore line: [Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZAmmzG']
         ignore line: []
-        ignore line: [Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_c8585/fast]
-        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_c8585.dir/build.make CMakeFiles/cmTC_c8585.dir/build]
-        ignore line: [gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1rDbWv']
-        ignore line: [Building C object CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc   -v -o CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_92d73/fast]
+        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_92d73.dir/build.make CMakeFiles/cmTC_92d73.dir/build]
+        ignore line: [gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZAmmzG']
+        ignore line: [Building C object CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc   -v -o CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
         ignore line: [Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs]
         ignore line: [COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -198,8 +198,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (Spack GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c8585.dir/']
-        ignore line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c8585.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/faguo/ccHXHkjM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_92d73.dir/']
+        ignore line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1 -quiet -v /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_92d73.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/faguo/cc8NPyRO.s]
         ignore line: [GNU C17 (Spack GCC) version 14.2.0 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -220,14 +220,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b9cd5ad9c813498010260246cca752e6]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c8585.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o /tmp/faguo/ccHXHkjM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_92d73.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o /tmp/faguo/cc8NPyRO.s]
         ignore line: [GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1]
         ignore line: [COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_c8585]
-        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8585.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_92d73]
+        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92d73.dir/link.txt --verbose=1]
         ignore line: [Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs]
         ignore line: [COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper]
@@ -238,13 +238,13 @@ events:
         ignore line: [gcc version 14.2.0 (Spack GCC) ]
         ignore line: [COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8585' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c8585.']
-        link line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccQrvMaY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c8585 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_92d73' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_92d73.']
+        link line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccC5U4mF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_92d73 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/faguo/ccQrvMaY.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/faguo/ccC5U4mF.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -256,7 +256,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_c8585] ==> ignore
+          arg [cmTC_92d73] ==> ignore
           arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
           arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o] ==> obj [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o]
@@ -268,7 +268,7 @@ events:
           arg [-rpath] ==> ignore
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -283,7 +283,7 @@ events:
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o] ==> obj [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o]
           arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [/usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccQrvMaY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c8585 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_c8585.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccC5U4mF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_92d73 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_92d73.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
         collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
@@ -318,8 +318,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gTVnae"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gTVnae"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bzn4C1"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bzn4C1"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -330,13 +330,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gTVnae'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bzn4C1'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_52d09/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_52d09.dir/build.make CMakeFiles/cmTC_52d09.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gTVnae'
-        Building CXX object CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++   -v -o CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_b9999/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_b9999.dir/build.make CMakeFiles/cmTC_b9999.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bzn4C1'
+        Building CXX object CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++   -v -o CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs
         COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++
         Target: x86_64-pc-linux-gnu
@@ -344,8 +344,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (Spack GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_52d09.dir/'
-         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -D_GNU_SOURCE /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_52d09.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/faguo/ccIlFWea.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9999.dir/'
+         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -D_GNU_SOURCE /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b9999.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/faguo/cczZQHfJ.s
         GNU C++17 (Spack GCC) version 14.2.0 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -369,14 +369,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 977b54070944ff66393c22789a043924
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_52d09.dir/'
-         as -v --64 -o CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o /tmp/faguo/ccIlFWea.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9999.dir/'
+         as -v --64 -o CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o /tmp/faguo/cczZQHfJ.s
         GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1
         COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_52d09
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52d09.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_b9999
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9999.dir/link.txt --verbose=1
         Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs
         COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++
         COLLECT_LTO_WRAPPER=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper
@@ -387,14 +387,14 @@ events:
         gcc version 14.2.0 (Spack GCC) 
         COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_52d09' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_52d09.'
-         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccEQKNLa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_52d09 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b9999' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b9999.'
+         /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccquFw5g.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b9999 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
         collect2 version 14.2.0
-        /usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccEQKNLa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_52d09 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
+        /usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccquFw5g.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b9999 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o
         GNU ld version 2.35.2-67.el9_7.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_52d09' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_52d09.'
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++  -v -Wl,-v CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_52d09
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gTVnae'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b9999' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b9999.'
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++  -v -Wl,-v CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b9999
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bzn4C1'
         
       exitCode: 0
   -
@@ -451,13 +451,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gTVnae']
+        ignore line: [Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bzn4C1']
         ignore line: []
-        ignore line: [Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_52d09/fast]
-        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_52d09.dir/build.make CMakeFiles/cmTC_52d09.dir/build]
-        ignore line: [gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gTVnae']
-        ignore line: [Building CXX object CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++   -v -o CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_b9999/fast]
+        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_b9999.dir/build.make CMakeFiles/cmTC_b9999.dir/build]
+        ignore line: [gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bzn4C1']
+        ignore line: [Building CXX object CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++   -v -o CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o -c /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs]
         ignore line: [COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -465,8 +465,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (Spack GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_52d09.dir/']
-        ignore line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -D_GNU_SOURCE /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_52d09.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/faguo/ccIlFWea.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9999.dir/']
+        ignore line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/cc1plus -quiet -v -D_GNU_SOURCE /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b9999.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/faguo/cczZQHfJ.s]
         ignore line: [GNU C++17 (Spack GCC) version 14.2.0 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -490,14 +490,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 977b54070944ff66393c22789a043924]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_52d09.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o /tmp/faguo/ccIlFWea.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9999.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o /tmp/faguo/cczZQHfJ.s]
         ignore line: [GNU assembler version 2.35.2 (x86_64-redhat-linux) using BFD version version 2.35.2-67.el9_7.1]
         ignore line: [COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_52d09]
-        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52d09.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_b9999]
+        ignore line: [/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9999.dir/link.txt --verbose=1]
         ignore line: [Reading specs from /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/specs]
         ignore line: [COLLECT_GCC=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++]
         ignore line: [COLLECT_LTO_WRAPPER=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper]
@@ -508,13 +508,13 @@ events:
         ignore line: [gcc version 14.2.0 (Spack GCC) ]
         ignore line: [COMPILER_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_52d09' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_52d09.']
-        link line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccEQKNLa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_52d09 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b9999' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b9999.']
+        link line: [ /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2 -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccquFw5g.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b9999 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/faguo/ccEQKNLa.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/faguo/ccquFw5g.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -526,7 +526,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_52d09] ==> ignore
+          arg [cmTC_b9999] ==> ignore
           arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
           arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o] ==> obj [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o]
@@ -538,7 +538,7 @@ events:
           arg [-rpath] ==> ignore
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -549,7 +549,7 @@ events:
           arg [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o] ==> obj [/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o]
           arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
         ignore line: [collect2 version 14.2.0]
-        ignore line: [/usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccEQKNLa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_52d09 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_52d09.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/liblto_plugin.so -plugin-opt=/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/libexec/gcc/x86_64-pc-linux-gnu/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/faguo/ccquFw5g.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b9999 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtbegin.o -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../.. -rpath /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64 -v CMakeFiles/cmTC_b9999.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0/crtend.o /lib/../lib64/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
         collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
@@ -592,8 +592,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-WX1H2n"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-WX1H2n"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SnuvyR"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SnuvyR"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -604,17 +604,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-WX1H2n'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SnuvyR'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_4f9b0/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_4f9b0.dir/build.make CMakeFiles/cmTC_4f9b0.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-WX1H2n'
-        Building C object CMakeFiles/cmTC_4f9b0.dir/src.c.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4f9b0.dir/src.c.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-WX1H2n/src.c
-        Linking C executable cmTC_4f9b0
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f9b0.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc CMakeFiles/cmTC_4f9b0.dir/src.c.o -o cmTC_4f9b0
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-WX1H2n'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_5dc13/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_5dc13.dir/build.make CMakeFiles/cmTC_5dc13.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SnuvyR'
+        Building C object CMakeFiles/cmTC_5dc13.dir/src.c.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5dc13.dir/src.c.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SnuvyR/src.c
+        Linking C executable cmTC_5dc13
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dc13.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/gcc CMakeFiles/cmTC_5dc13.dir/src.c.o -o cmTC_5dc13
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SnuvyR'
         
       exitCode: 0
   -
@@ -635,8 +635,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-EwGOVN"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-EwGOVN"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-XyZuTM"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-XyZuTM"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -647,17 +647,17 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-EwGOVN'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-XyZuTM'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_9c66c/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_9c66c.dir/build.make CMakeFiles/cmTC_9c66c.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-EwGOVN'
-        Building CXX object CMakeFiles/cmTC_9c66c.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DHAVE_STDATOMIC   -o CMakeFiles/cmTC_9c66c.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-EwGOVN/src.cxx
-        Linking CXX executable cmTC_9c66c
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c66c.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ CMakeFiles/cmTC_9c66c.dir/src.cxx.o -o cmTC_9c66c
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-EwGOVN'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_2c6e0/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_2c6e0.dir/build.make CMakeFiles/cmTC_2c6e0.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-XyZuTM'
+        Building CXX object CMakeFiles/cmTC_2c6e0.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DHAVE_STDATOMIC   -o CMakeFiles/cmTC_2c6e0.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-XyZuTM/src.cxx
+        Linking CXX executable cmTC_2c6e0
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c6e0.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ CMakeFiles/cmTC_2c6e0.dir/src.cxx.o -o cmTC_2c6e0
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-XyZuTM'
         
       exitCode: 0
   -
@@ -671,8 +671,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__Wshadow"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-FUip3R"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-FUip3R"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bbwo7c"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bbwo7c"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -683,17 +683,17 @@ events:
       variable: "CXX_FLAG_WORKS__Wshadow"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-FUip3R'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bbwo7c'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_3f984/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_3f984.dir/build.make CMakeFiles/cmTC_3f984.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-FUip3R'
-        Building CXX object CMakeFiles/cmTC_3f984.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wshadow  -Wshadow -o CMakeFiles/cmTC_3f984.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-FUip3R/src.cxx
-        Linking CXX executable cmTC_3f984
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f984.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ CMakeFiles/cmTC_3f984.dir/src.cxx.o -o cmTC_3f984
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-FUip3R'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_02ce5/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_02ce5.dir/build.make CMakeFiles/cmTC_02ce5.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bbwo7c'
+        Building CXX object CMakeFiles/cmTC_02ce5.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wshadow  -Wshadow -o CMakeFiles/cmTC_02ce5.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bbwo7c/src.cxx
+        Linking CXX executable cmTC_02ce5
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02ce5.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ CMakeFiles/cmTC_02ce5.dir/src.cxx.o -o cmTC_02ce5
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-bbwo7c'
         
       exitCode: 0
   -
@@ -707,8 +707,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__Wformat_security"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-46YOAl"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-46YOAl"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-VaBtpQ"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-VaBtpQ"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-Wshadow  "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -719,18 +719,18 @@ events:
       variable: "CXX_FLAG_WORKS__Wformat_security"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-46YOAl'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-VaBtpQ'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_20cfb/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_20cfb.dir/build.make CMakeFiles/cmTC_20cfb.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-46YOAl'
-        Building CXX object CMakeFiles/cmTC_20cfb.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wformat_security  -Wshadow      -Wformat-security -o CMakeFiles/cmTC_20cfb.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-46YOAl/src.cxx
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_c7555/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_c7555.dir/build.make CMakeFiles/cmTC_c7555.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-VaBtpQ'
+        Building CXX object CMakeFiles/cmTC_c7555.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wformat_security  -Wshadow      -Wformat-security -o CMakeFiles/cmTC_c7555.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-VaBtpQ/src.cxx
         cc1plus: warning: '-Wformat-security' ignored without '-Wformat' [-Wformat-security]
-        Linking CXX executable cmTC_20cfb
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20cfb.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wshadow    CMakeFiles/cmTC_20cfb.dir/src.cxx.o -o cmTC_20cfb
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-46YOAl'
+        Linking CXX executable cmTC_c7555
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7555.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wshadow    CMakeFiles/cmTC_c7555.dir/src.cxx.o -o cmTC_c7555
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-VaBtpQ'
         
       exitCode: 0
   -
@@ -744,8 +744,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__Wno_long_long"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-CbtBJW"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-CbtBJW"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-HiLYB6"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-HiLYB6"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-Wformat-security -Wshadow   "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -756,18 +756,18 @@ events:
       variable: "CXX_FLAG_WORKS__Wno_long_long"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-CbtBJW'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-HiLYB6'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_565c5/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_565c5.dir/build.make CMakeFiles/cmTC_565c5.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-CbtBJW'
-        Building CXX object CMakeFiles/cmTC_565c5.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wno_long_long  -Wformat-security -Wshadow       -Wno-long-long -o CMakeFiles/cmTC_565c5.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-CbtBJW/src.cxx
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_b4763/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_b4763.dir/build.make CMakeFiles/cmTC_b4763.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-HiLYB6'
+        Building CXX object CMakeFiles/cmTC_b4763.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wno_long_long  -Wformat-security -Wshadow       -Wno-long-long -o CMakeFiles/cmTC_b4763.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-HiLYB6/src.cxx
         cc1plus: warning: '-Wformat-security' ignored without '-Wformat' [-Wformat-security]
-        Linking CXX executable cmTC_565c5
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_565c5.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wformat-security -Wshadow     CMakeFiles/cmTC_565c5.dir/src.cxx.o -o cmTC_565c5
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-CbtBJW'
+        Linking CXX executable cmTC_b4763
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4763.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wformat-security -Wshadow     CMakeFiles/cmTC_b4763.dir/src.cxx.o -o cmTC_b4763
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-HiLYB6'
         
       exitCode: 0
   -
@@ -781,8 +781,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__Wdeprecated"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-aVAX0H"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-aVAX0H"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gcnALV"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gcnALV"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-Wno-long-long -Wformat-security -Wshadow    "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -793,18 +793,18 @@ events:
       variable: "CXX_FLAG_WORKS__Wdeprecated"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-aVAX0H'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gcnALV'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_0fe10/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_0fe10.dir/build.make CMakeFiles/cmTC_0fe10.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-aVAX0H'
-        Building CXX object CMakeFiles/cmTC_0fe10.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wdeprecated  -Wno-long-long -Wformat-security -Wshadow        -Wdeprecated -o CMakeFiles/cmTC_0fe10.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-aVAX0H/src.cxx
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_13d1d/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_13d1d.dir/build.make CMakeFiles/cmTC_13d1d.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gcnALV'
+        Building CXX object CMakeFiles/cmTC_13d1d.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wdeprecated  -Wno-long-long -Wformat-security -Wshadow        -Wdeprecated -o CMakeFiles/cmTC_13d1d.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gcnALV/src.cxx
         cc1plus: warning: '-Wformat-security' ignored without '-Wformat' [-Wformat-security]
-        Linking CXX executable cmTC_0fe10
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0fe10.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wno-long-long -Wformat-security -Wshadow      CMakeFiles/cmTC_0fe10.dir/src.cxx.o -o cmTC_0fe10
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-aVAX0H'
+        Linking CXX executable cmTC_13d1d
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13d1d.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wno-long-long -Wformat-security -Wshadow      CMakeFiles/cmTC_13d1d.dir/src.cxx.o -o cmTC_13d1d
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gcnALV'
         
       exitCode: 0
   -
@@ -818,8 +818,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__fdiagnostics_color=auto"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-lNHur9"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-lNHur9"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-zfcal7"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-zfcal7"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-Wdeprecated -Wno-long-long -Wformat-security -Wshadow     "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -830,18 +830,18 @@ events:
       variable: "CXX_FLAG_WORKS__fdiagnostics_color=auto"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-lNHur9'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-zfcal7'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_eb91b/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_eb91b.dir/build.make CMakeFiles/cmTC_eb91b.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-lNHur9'
-        Building CXX object CMakeFiles/cmTC_eb91b.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__fdiagnostics_color=auto  -Wdeprecated -Wno-long-long -Wformat-security -Wshadow         -fdiagnostics-color=auto -o CMakeFiles/cmTC_eb91b.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-lNHur9/src.cxx
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_1d216/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_1d216.dir/build.make CMakeFiles/cmTC_1d216.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-zfcal7'
+        Building CXX object CMakeFiles/cmTC_1d216.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__fdiagnostics_color=auto  -Wdeprecated -Wno-long-long -Wformat-security -Wshadow         -fdiagnostics-color=auto -o CMakeFiles/cmTC_1d216.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-zfcal7/src.cxx
         cc1plus: warning: '-Wformat-security' ignored without '-Wformat' [-Wformat-security]
-        Linking CXX executable cmTC_eb91b
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb91b.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wdeprecated -Wno-long-long -Wformat-security -Wshadow       CMakeFiles/cmTC_eb91b.dir/src.cxx.o -o cmTC_eb91b
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-lNHur9'
+        Linking CXX executable cmTC_1d216
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d216.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wdeprecated -Wno-long-long -Wformat-security -Wshadow       CMakeFiles/cmTC_1d216.dir/src.cxx.o -o cmTC_1d216
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-zfcal7'
         
       exitCode: 0
   -
@@ -855,8 +855,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__Wall"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZIh3Y4"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZIh3Y4"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SIKluf"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SIKluf"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow      "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -867,17 +867,17 @@ events:
       variable: "CXX_FLAG_WORKS__Wall"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZIh3Y4'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SIKluf'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_18d49/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_18d49.dir/build.make CMakeFiles/cmTC_18d49.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZIh3Y4'
-        Building CXX object CMakeFiles/cmTC_18d49.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wall  -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow          -Wall -o CMakeFiles/cmTC_18d49.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZIh3Y4/src.cxx
-        Linking CXX executable cmTC_18d49
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18d49.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow        CMakeFiles/cmTC_18d49.dir/src.cxx.o -o cmTC_18d49
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ZIh3Y4'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_db1e4/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_db1e4.dir/build.make CMakeFiles/cmTC_db1e4.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SIKluf'
+        Building CXX object CMakeFiles/cmTC_db1e4.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wall  -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow          -Wall -o CMakeFiles/cmTC_db1e4.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SIKluf/src.cxx
+        Linking CXX executable cmTC_db1e4
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db1e4.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow        CMakeFiles/cmTC_db1e4.dir/src.cxx.o -o cmTC_db1e4
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-SIKluf'
         
       exitCode: 0
   -
@@ -891,8 +891,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__Wextra"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ijTw08"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ijTw08"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-rMlbFQ"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-rMlbFQ"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow       "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -903,17 +903,17 @@ events:
       variable: "CXX_FLAG_WORKS__Wextra"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ijTw08'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-rMlbFQ'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_6c42e/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_6c42e.dir/build.make CMakeFiles/cmTC_6c42e.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ijTw08'
-        Building CXX object CMakeFiles/cmTC_6c42e.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wextra  -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow           -Wextra -o CMakeFiles/cmTC_6c42e.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ijTw08/src.cxx
-        Linking CXX executable cmTC_6c42e
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c42e.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow         CMakeFiles/cmTC_6c42e.dir/src.cxx.o -o cmTC_6c42e
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-ijTw08'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_5dde5/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_5dde5.dir/build.make CMakeFiles/cmTC_5dde5.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-rMlbFQ'
+        Building CXX object CMakeFiles/cmTC_5dde5.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wextra  -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow           -Wextra -o CMakeFiles/cmTC_5dde5.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-rMlbFQ/src.cxx
+        Linking CXX executable cmTC_5dde5
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dde5.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow         CMakeFiles/cmTC_5dde5.dir/src.cxx.o -o cmTC_5dde5
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-rMlbFQ'
         
       exitCode: 0
   -
@@ -927,8 +927,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__pedantic"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1jmeOc"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1jmeOc"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-69fGXr"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-69fGXr"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow        "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -939,17 +939,17 @@ events:
       variable: "CXX_FLAG_WORKS__pedantic"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1jmeOc'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-69fGXr'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_15495/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_15495.dir/build.make CMakeFiles/cmTC_15495.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1jmeOc'
-        Building CXX object CMakeFiles/cmTC_15495.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__pedantic  -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow            -pedantic -o CMakeFiles/cmTC_15495.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1jmeOc/src.cxx
-        Linking CXX executable cmTC_15495
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15495.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow          CMakeFiles/cmTC_15495.dir/src.cxx.o -o cmTC_15495
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-1jmeOc'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_e6df2/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_e6df2.dir/build.make CMakeFiles/cmTC_e6df2.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-69fGXr'
+        Building CXX object CMakeFiles/cmTC_e6df2.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__pedantic  -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow            -pedantic -o CMakeFiles/cmTC_e6df2.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-69fGXr/src.cxx
+        Linking CXX executable cmTC_e6df2
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6df2.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow          CMakeFiles/cmTC_e6df2.dir/src.cxx.o -o cmTC_e6df2
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-69fGXr'
         
       exitCode: 0
   -
@@ -963,8 +963,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS__Wno_psabi"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-wYCojS"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-wYCojS"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-APNPjf"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-APNPjf"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow         "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -975,17 +975,17 @@ events:
       variable: "CXX_FLAG_WORKS__Wno_psabi"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-wYCojS'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-APNPjf'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_fa09d/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_fa09d.dir/build.make CMakeFiles/cmTC_fa09d.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-wYCojS'
-        Building CXX object CMakeFiles/cmTC_fa09d.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wno_psabi  -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow             -Wno-psabi -o CMakeFiles/cmTC_fa09d.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-wYCojS/src.cxx
-        Linking CXX executable cmTC_fa09d
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa09d.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow           CMakeFiles/cmTC_fa09d.dir/src.cxx.o -o cmTC_fa09d
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-wYCojS'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_5d71f/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_5d71f.dir/build.make CMakeFiles/cmTC_5d71f.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-APNPjf'
+        Building CXX object CMakeFiles/cmTC_5d71f.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__Wno_psabi  -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow             -Wno-psabi -o CMakeFiles/cmTC_5d71f.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-APNPjf/src.cxx
+        Linking CXX executable cmTC_5d71f
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d71f.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow           CMakeFiles/cmTC_5d71f.dir/src.cxx.o -o cmTC_5d71f
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-APNPjf'
         
       exitCode: 0
   -
@@ -999,8 +999,8 @@ events:
     checks:
       - "Performing Test CXX_FLAG_WORKS_FTLS_global_dynamic"
     directories:
-      source: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-YNjsp2"
-      binary: "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-YNjsp2"
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gpBo7h"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gpBo7h"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-Wno-psabi -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow          "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1011,17 +1011,60 @@ events:
       variable: "CXX_FLAG_WORKS_FTLS_global_dynamic"
       cached: true
       stdout: |
-        Change Dir: '/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-YNjsp2'
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gpBo7h'
         
-        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_54598/fast
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_54598.dir/build.make CMakeFiles/cmTC_54598.dir/build
-        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-YNjsp2'
-        Building CXX object CMakeFiles/cmTC_54598.dir/src.cxx.o
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS_FTLS_global_dynamic  -Wno-psabi -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow              -ftls-model=global-dynamic -o CMakeFiles/cmTC_54598.dir/src.cxx.o -c /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-YNjsp2/src.cxx
-        Linking CXX executable cmTC_54598
-        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54598.dir/link.txt --verbose=1
-        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wno-psabi -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow            CMakeFiles/cmTC_54598.dir/src.cxx.o -o cmTC_54598
-        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-YNjsp2'
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_4d579/fast
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_4d579.dir/build.make CMakeFiles/cmTC_4d579.dir/build
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gpBo7h'
+        Building CXX object CMakeFiles/cmTC_4d579.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS_FTLS_global_dynamic  -Wno-psabi -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow              -ftls-model=global-dynamic -o CMakeFiles/cmTC_4d579.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gpBo7h/src.cxx
+        Linking CXX executable cmTC_4d579
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d579.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wno-psabi -pedantic -Wextra -Wall -fdiagnostics-color=auto -Wdeprecated -Wno-long-long -Wformat-security -Wshadow            CMakeFiles/cmTC_4d579.dir/src.cxx.o -o cmTC_4d579
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-gpBo7h'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/dd4hep/1.35-6qzj4d/cmake/DD4hepBuild.cmake:58 (CHECK_CXX_COMPILER_FLAG)"
+      - "CMakeLists.txt:8 (dd4hep_set_compiler_flags)"
+    checks:
+      - "Performing Test CXX_FLAG_WORKS__fdiagnostics_color=auto"
+    directories:
+      source: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l"
+      binary: "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-Wdeprecated -Wno-long-long -Wformat-security -Wshadow     "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/dd4hep/1.35-6qzj4d/cmake;/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/qt-base/6.10.1-ucjuru/lib/cmake/Qt6;/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/qt-base/6.10.1-ucjuru/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/qt-base/6.10.1-ucjuru/lib/cmake/Qt6/3rdparty/kwin;/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/root/6.38.00-lovp3j/share/root/cmake/modules;/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/root/6.38.00-lovp3j/share/root/cmake/modules"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "CXX_FLAG_WORKS__fdiagnostics_color=auto"
+      cached: true
+      stdout: |
+        Change Dir: '/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l'
+        
+        Run Build Command(s): /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E env VERBOSE=1 /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake -f Makefile cmTC_7b3b6/fast
+        gmake[1]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l'
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/gmake/4.4.1-4wkzy5/bin/gmake  -f CMakeFiles/cmTC_7b3b6.dir/build.make CMakeFiles/cmTC_7b3b6.dir/build
+        gmake[2]: Entering directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l'
+        Building CXX object CMakeFiles/cmTC_7b3b6.dir/src.cxx.o
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -DCXX_FLAG_WORKS__fdiagnostics_color=auto  -Wdeprecated -Wno-long-long -Wformat-security -Wshadow         -fdiagnostics-color=auto -o CMakeFiles/cmTC_7b3b6.dir/src.cxx.o -c /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l/src.cxx
+        cc1plus: warning: '-Wformat-security' ignored without '-Wformat' [-Wformat-security]
+        Linking CXX executable cmTC_7b3b6
+        /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/cmake/3.31.9-oz7y6u/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b3b6.dir/link.txt --verbose=1
+        /cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/bin/g++ -Wdeprecated -Wno-long-long -Wformat-security -Wshadow       CMakeFiles/cmTC_7b3b6.dir/src.cxx.o -o cmTC_7b3b6
+        gmake[2]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l'
+        gmake[1]: Leaving directory '/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles/CMakeScratch/TryCompile-B6y19l'
         
       exitCode: 0
 ...

@@ -1,8 +1,8 @@
-# Install script for directory: /eos/user/f/faguo/FCCSW/DD4hep_Grainita
+# Install script for directory: /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/install")
+  set(CMAKE_INSTALL_PREFIX "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE FILE FILES "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/lib/libDD4hepTutorials.components")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE FILE FILES "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/lib/libDD4hepTutorials.components")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -53,7 +53,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libDD4hepTutorials.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/lib/libDD4hepTutorials.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE SHARED_LIBRARY FILES "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/lib/libDD4hepTutorials.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libDD4hepTutorials.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/libDD4hepTutorials.so")
     file(RPATH_CHANGE
@@ -69,16 +69,10 @@ endif()
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/sdaction/cmake_install.cmake")
-
-endif()
-
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/install_local_manifest.txt"
+  file(WRITE "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -94,6 +88,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

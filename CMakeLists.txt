@@ -10,8 +10,7 @@ dd4hep_configure_output()
 
 # Collect all source files
 set(SOURCES
-  ${PROJECT_SOURCE_DIR}/simplecalo1/src/simplecalo1.cpp
-  ${PROJECT_SOURCE_DIR}/simplecalo2/src/simplecalo2.cpp
+  ${PROJECT_SOURCE_DIR}/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp
 )
 add_compile_options(-Wno-unused-variable)
 
@@ -26,9 +25,8 @@ dd4hep_add_plugin(${PROJECT_NAME} SOURCES ${SOURCES} USES
 )
 
 # Add both include directories
-target_include_directories(${PROJECT_NAME} PRIVATE
-  ${PROJECT_SOURCE_DIR}/simplecalo1/include
-  ${PROJECT_SOURCE_DIR}/simplecalo2/include
-)
+#target_include_directories(${PROJECT_NAME} PRIVATE
+#  ${PROJECT_SOURCE_DIR}/simplecalo1/include
+#  ${PROJECT_SOURCE_DIR}/simplecalo2/include
+#)
 
-add_subdirectory(sdaction)

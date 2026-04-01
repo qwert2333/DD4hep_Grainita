@@ -4,7 +4,7 @@ SIM = DD4hepSimulation()
 
 
 ## The compact XML file, or multiple compact files, if the last one is the closer.
-SIM.compactFile = ["simplecalo1/compact/simplecalo1.xml"]
+SIM.compactFile = ["compact/Grainita_ECAL_Barrel_v01.xml"]
 ## Lorentz boost for the crossing angle, in radian!
 SIM.crossingAngleBoost = 0.0
 SIM.enableDetailedShowerMode = False
@@ -17,14 +17,14 @@ SIM.inputFiles = []
 ## Macro file to execute for runType 'run' or 'vis'
 SIM.macroFile = ""
 ## number of events to simulate, used in batch mode
-SIM.numberOfEvents = 500
+SIM.numberOfEvents = 10
 ## Outputfile from the simulation: .slcio, edm4hep.root and .root output files are supported
 SIM.outputFile = "simplecalo.root"
 ## Physics list to use in simulation
 SIM.physicsList = None
 ## Verbosity use integers from 1(most) to 7(least) verbose
 ## or strings: VERBOSE, DEBUG, INFO, WARNING, ERROR, FATAL, ALWAYS
-SIM.printLevel = 3
+SIM.printLevel = "INFO"
 ## The type of action to do in this invocation
 ## batch: just simulate some events, needs numberOfEvents, and input file or gun
 ## vis: enable visualisation, run the macroFile if it is set
@@ -251,7 +251,7 @@ SIM.guineapig.particlesPerEvent = "-1"
 ################################################################################
 
 ##  direction of the particle gun, 3 vector 
-SIM.gun.direction = (0, 0, 1)
+SIM.gun.direction = (0.95, 0.01, 0)
 
 ## choose the distribution of the random direction for theta
 ## 
@@ -269,7 +269,7 @@ SIM.gun.distribution = None
 ## Total energy (including mass) for the particle gun.
 ## 
 ## If not None, it will overwrite the setting of momentumMin and momentumMax
-SIM.gun.energy = 50.0*GeV
+SIM.gun.energy = 5.0*GeV
 
 ## Maximal pseudorapidity for random distibution (overrides thetaMin)
 SIM.gun.etaMax = None
@@ -299,7 +299,7 @@ SIM.gun.phiMax = None
 SIM.gun.phiMin = None
 
 ##  position of the particle gun, 3 vector 
-SIM.gun.position = (0.0, 0.0, -2.0*m)
+SIM.gun.position = (0.0, 0.0, 0.0)
 
 ## Maximal polar angle for random distribution
 SIM.gun.thetaMax = None

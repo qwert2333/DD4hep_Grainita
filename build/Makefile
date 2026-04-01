@@ -57,10 +57,10 @@ RM = /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-o
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /eos/user/f/faguo/FCCSW/DD4hep_Grainita
+CMAKE_SOURCE_DIR = /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build
+CMAKE_BINARY_DIR = /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,7 +87,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"shlib\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -187,55 +187,29 @@ Components_DD4hepTutorials/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Components_DD4hepTutorials.dir/build.make CMakeFiles/Components_DD4hepTutorials.dir/build
 .PHONY : Components_DD4hepTutorials/fast
 
-#=============================================================================
-# Target rules for targets named sdaction
-
-# Build rule for target.
-sdaction: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdaction
-.PHONY : sdaction
-
-# fast build rule for target.
-sdaction/fast:
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/sdaction.dir/build.make sdaction/CMakeFiles/sdaction.dir/build
-.PHONY : sdaction/fast
-
-#=============================================================================
-# Target rules for targets named Components_sdaction
-
-# Build rule for target.
-Components_sdaction: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Components_sdaction
-.PHONY : Components_sdaction
-
-# fast build rule for target.
-Components_sdaction/fast:
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/Components_sdaction.dir/build.make sdaction/CMakeFiles/Components_sdaction.dir/build
-.PHONY : Components_sdaction/fast
-
-simplecalo1/src/simplecalo1.o: simplecalo1/src/simplecalo1.cpp.o
-.PHONY : simplecalo1/src/simplecalo1.o
+Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.o: Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o
+.PHONY : Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.o
 
 # target to build an object file
-simplecalo1/src/simplecalo1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.o
-.PHONY : simplecalo1/src/simplecalo1.cpp.o
+Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o
+.PHONY : Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.o
 
-simplecalo1/src/simplecalo1.i: simplecalo1/src/simplecalo1.cpp.i
-.PHONY : simplecalo1/src/simplecalo1.i
+Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.i: Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.i
+.PHONY : Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.i
 
 # target to preprocess a source file
-simplecalo1/src/simplecalo1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.i
-.PHONY : simplecalo1/src/simplecalo1.cpp.i
+Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.i
+.PHONY : Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.i
 
-simplecalo1/src/simplecalo1.s: simplecalo1/src/simplecalo1.cpp.s
-.PHONY : simplecalo1/src/simplecalo1.s
+Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.s: Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.s
+.PHONY : Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.s
 
 # target to generate assembly for a file
-simplecalo1/src/simplecalo1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/simplecalo1/src/simplecalo1.cpp.s
-.PHONY : simplecalo1/src/simplecalo1.cpp.s
+Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.s
+.PHONY : Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp.s
 
 # Help Target
 help:
@@ -250,12 +224,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Components_DD4hepTutorials"
-	@echo "... Components_sdaction"
 	@echo "... DD4hepTutorials"
-	@echo "... sdaction"
-	@echo "... simplecalo1/src/simplecalo1.o"
-	@echo "... simplecalo1/src/simplecalo1.i"
-	@echo "... simplecalo1/src/simplecalo1.s"
+	@echo "... Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.o"
+	@echo "... Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.i"
+	@echo "... Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.s"
 .PHONY : help
 
 

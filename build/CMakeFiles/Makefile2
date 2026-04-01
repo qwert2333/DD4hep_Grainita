@@ -54,10 +54,10 @@ RM = /cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-o
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /eos/user/f/faguo/FCCSW/DD4hep_Grainita
+CMAKE_SOURCE_DIR = /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build
+CMAKE_BINARY_DIR = /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -65,46 +65,21 @@ CMAKE_BINARY_DIR = /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build
 # The main recursive "all" target.
 all: CMakeFiles/DD4hepTutorials.dir/all
 all: CMakeFiles/Components_DD4hepTutorials.dir/all
-all: sdaction/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/DD4hepTutorials.dir/codegen
 codegen: CMakeFiles/Components_DD4hepTutorials.dir/codegen
-codegen: sdaction/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall: sdaction/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/DD4hepTutorials.dir/clean
 clean: CMakeFiles/Components_DD4hepTutorials.dir/clean
-clean: sdaction/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory sdaction
-
-# Recursive "all" directory target.
-sdaction/all: sdaction/CMakeFiles/sdaction.dir/all
-sdaction/all: sdaction/CMakeFiles/Components_sdaction.dir/all
-.PHONY : sdaction/all
-
-# Recursive "codegen" directory target.
-sdaction/codegen: sdaction/CMakeFiles/sdaction.dir/codegen
-sdaction/codegen: sdaction/CMakeFiles/Components_sdaction.dir/codegen
-.PHONY : sdaction/codegen
-
-# Recursive "preinstall" directory target.
-sdaction/preinstall:
-.PHONY : sdaction/preinstall
-
-# Recursive "clean" directory target.
-sdaction/clean: sdaction/CMakeFiles/sdaction.dir/clean
-sdaction/clean: sdaction/CMakeFiles/Components_sdaction.dir/clean
-.PHONY : sdaction/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/DD4hepTutorials.dir
@@ -113,14 +88,14 @@ sdaction/clean: sdaction/CMakeFiles/Components_sdaction.dir/clean
 CMakeFiles/DD4hepTutorials.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=3,4 "Built target DD4hepTutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=2,3 "Built target DD4hepTutorials"
 .PHONY : CMakeFiles/DD4hepTutorials.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DD4hepTutorials.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DD4hepTutorials.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
 .PHONY : CMakeFiles/DD4hepTutorials.dir/rule
 
 # Convenience name for target.
@@ -130,7 +105,7 @@ DD4hepTutorials: CMakeFiles/DD4hepTutorials.dir/rule
 # codegen rule for target.
 CMakeFiles/DD4hepTutorials.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DD4hepTutorials.dir/build.make CMakeFiles/DD4hepTutorials.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=3,4 "Finished codegen for target DD4hepTutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=2,3 "Finished codegen for target DD4hepTutorials"
 .PHONY : CMakeFiles/DD4hepTutorials.dir/codegen
 
 # clean rule for target.
@@ -145,14 +120,14 @@ CMakeFiles/DD4hepTutorials.dir/clean:
 CMakeFiles/Components_DD4hepTutorials.dir/all: CMakeFiles/DD4hepTutorials.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Components_DD4hepTutorials.dir/build.make CMakeFiles/Components_DD4hepTutorials.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Components_DD4hepTutorials.dir/build.make CMakeFiles/Components_DD4hepTutorials.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=1 "Built target Components_DD4hepTutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=1 "Built target Components_DD4hepTutorials"
 .PHONY : CMakeFiles/Components_DD4hepTutorials.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Components_DD4hepTutorials.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Components_DD4hepTutorials.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
 .PHONY : CMakeFiles/Components_DD4hepTutorials.dir/rule
 
 # Convenience name for target.
@@ -162,77 +137,13 @@ Components_DD4hepTutorials: CMakeFiles/Components_DD4hepTutorials.dir/rule
 # codegen rule for target.
 CMakeFiles/Components_DD4hepTutorials.dir/codegen: CMakeFiles/DD4hepTutorials.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Components_DD4hepTutorials.dir/build.make CMakeFiles/Components_DD4hepTutorials.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=1 "Finished codegen for target Components_DD4hepTutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=1 "Finished codegen for target Components_DD4hepTutorials"
 .PHONY : CMakeFiles/Components_DD4hepTutorials.dir/codegen
 
 # clean rule for target.
 CMakeFiles/Components_DD4hepTutorials.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Components_DD4hepTutorials.dir/build.make CMakeFiles/Components_DD4hepTutorials.dir/clean
 .PHONY : CMakeFiles/Components_DD4hepTutorials.dir/clean
-
-#=============================================================================
-# Target rules for target sdaction/CMakeFiles/sdaction.dir
-
-# All Build rule for target.
-sdaction/CMakeFiles/sdaction.dir/all:
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/sdaction.dir/build.make sdaction/CMakeFiles/sdaction.dir/depend
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/sdaction.dir/build.make sdaction/CMakeFiles/sdaction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=5,6 "Built target sdaction"
-.PHONY : sdaction/CMakeFiles/sdaction.dir/all
-
-# Build rule for subdir invocation for target.
-sdaction/CMakeFiles/sdaction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdaction/CMakeFiles/sdaction.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
-.PHONY : sdaction/CMakeFiles/sdaction.dir/rule
-
-# Convenience name for target.
-sdaction: sdaction/CMakeFiles/sdaction.dir/rule
-.PHONY : sdaction
-
-# codegen rule for target.
-sdaction/CMakeFiles/sdaction.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/sdaction.dir/build.make sdaction/CMakeFiles/sdaction.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=5,6 "Finished codegen for target sdaction"
-.PHONY : sdaction/CMakeFiles/sdaction.dir/codegen
-
-# clean rule for target.
-sdaction/CMakeFiles/sdaction.dir/clean:
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/sdaction.dir/build.make sdaction/CMakeFiles/sdaction.dir/clean
-.PHONY : sdaction/CMakeFiles/sdaction.dir/clean
-
-#=============================================================================
-# Target rules for target sdaction/CMakeFiles/Components_sdaction.dir
-
-# All Build rule for target.
-sdaction/CMakeFiles/Components_sdaction.dir/all: sdaction/CMakeFiles/sdaction.dir/all
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/Components_sdaction.dir/build.make sdaction/CMakeFiles/Components_sdaction.dir/depend
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/Components_sdaction.dir/build.make sdaction/CMakeFiles/Components_sdaction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=2 "Built target Components_sdaction"
-.PHONY : sdaction/CMakeFiles/Components_sdaction.dir/all
-
-# Build rule for subdir invocation for target.
-sdaction/CMakeFiles/Components_sdaction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdaction/CMakeFiles/Components_sdaction.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles 0
-.PHONY : sdaction/CMakeFiles/Components_sdaction.dir/rule
-
-# Convenience name for target.
-Components_sdaction: sdaction/CMakeFiles/Components_sdaction.dir/rule
-.PHONY : Components_sdaction
-
-# codegen rule for target.
-sdaction/CMakeFiles/Components_sdaction.dir/codegen: sdaction/CMakeFiles/sdaction.dir/all
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/Components_sdaction.dir/build.make sdaction/CMakeFiles/Components_sdaction.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/CMakeFiles --progress-num=2 "Finished codegen for target Components_sdaction"
-.PHONY : sdaction/CMakeFiles/Components_sdaction.dir/codegen
-
-# clean rule for target.
-sdaction/CMakeFiles/Components_sdaction.dir/clean:
-	$(MAKE) $(MAKESILENT) -f sdaction/CMakeFiles/Components_sdaction.dir/build.make sdaction/CMakeFiles/Components_sdaction.dir/clean
-.PHONY : sdaction/CMakeFiles/Components_sdaction.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

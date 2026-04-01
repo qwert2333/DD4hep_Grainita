@@ -35,7 +35,7 @@ set(__QT_DEPLOY_SYSTEM_NAME "Linux")
 set(__QT_DEPLOY_SHARED_LIBRARY_SUFFIX ".so")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "ON")
 set(__QT_DEPLOY_TOOL "GRD")
-set(__QT_DEPLOY_IMPL_DIR "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/.qt")
+set(__QT_DEPLOY_IMPL_DIR "/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/build/.qt")
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_LIBINFIX "")
@@ -60,7 +60,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-    "/eos/user/f/faguo/FCCSW/DD4hep_Grainita/build/.qt/QtDeployTargets.cmake"
+    "/eos/home-f/faguo/FCCSW/DD4hep_Grainita/build/.qt/QtDeployTargets.cmake"
     "/cvmfs/sw.hsf.org/key4hep/releases/2026-02-01/x86_64-almalinux9-gcc14.2.0-opt/qt-base/6.10.1-ucjuru/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
 )
 foreach(__qt_deploy_support_file IN LISTS __qt_deploy_support_files)
