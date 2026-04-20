@@ -1,7 +1,0 @@
-PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
-XMLLoader        INFO  +++ Processing XML file: file:/eos/home-f/faguo/FCCSW/DD4hep_Grainita/Grainita_ECAL/compact/Grainita_ECAL_Barrel_v01.xml
-DD4hep           WARN  ++ STD conditions NOT defined by client. NTP defaults taken.
-VisAttr          INFO  +++ SensitiveVis Allocated a Color: r:66 g:B2 b:FF, this will not save to a ROOT file
-VisAttr          INFO  +++ WLSFiberVis Allocated a Color: r:FF g:4C b:33, this will not save to a ROOT file
-Detector         INFO  *********** Created World volume with size: 1000 1000 1000
-Compact          ERROR FAILED to create segmentation: CylindricalGridPhiZ. Missing mandatory parameter: radius!

@@ -10,7 +10,7 @@
      #
      #==========================================================================
 -->
-  <info name="Grainita_ECAL_Barrel_v01"
+  <info name="Grainita_ECAL_Barrel_v02"
     title="Grainita ECAL full detector geometry (first ver.)"
     author="Fangyi Guo"
     url="None"
@@ -25,12 +25,12 @@
     <constant name="world_y" value="world_size"/>
     <constant name="world_z" value="world_size"/>
 
-    <constant name="InnerRadius"          value="200*cm"/>
-    <constant name="CrystalThickness"     value="42.2*cm"/>
+    <constant name="InnerRadius"          value="220*cm"/>
+    <constant name="CrystalThickness"     value="40*cm"/>
     <constant name="BackSpace"            value="1*cm"/>
-    <constant name="HalfZ"                value="300*cm"/>
-    <constant name="NumberOfPhiSectors"   value="50"/>
-    <constant name="NumberOfZModules"     value="5"/>
+    <constant name="HalfZ"                value="230*cm"/>
+    <constant name="NumberOfPhiSectors"   value="72"/>
+    <constant name="NumberOfZModules"     value="15"/>
     <constant name="FrameThickness"       value="2*mm"/>
     <constant name="SegThickness"         value="1.*mm"/>
     <constant name="FiberRadius"          value="0.5*mm"/>
@@ -67,7 +67,7 @@
        If a detector contains sub-detectors, their information must be included as below.
   -->
   <detectors>
-    <detector name="Grainita_ECAL_Barrel_v01" type="Grainita_ECAL_Barrel_v01" vis="CaloVis" id ="0" readout="GrainitaEcalBarrelRO" material="MixGrains">
+    <detector name="Grainita_ECAL_Barrel_v02" type="Grainita_ECAL_Barrel_v02" vis="CaloVis" id ="10" readout="GrainitaEcalBarrelRO" material="MixGrains">
     <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_BARREL"/>
     </detector>
   </detectors>
@@ -76,12 +76,10 @@
 
   <readouts>
     <readout name="GrainitaEcalBarrelRO">
-      <segmentation type="CylindricalGridPhiZ"
-       grid_size_phi="0.001*rad"
-       grid_size_z="1*cm"
-       radius="200*cm" />
-      <!-- NO SPACES BETWEEN ID DESCRIPTORS!!! -->
-      <id>system:5,module:3,sector:7,phi:-16,z:-16</id>
+      <segmentation type="FCCSWGridPhiTheta_k4geo"
+              phi_bins="1975"
+              grid_size_theta="0.003"/>
+      <id>system:5,stave:6,sector:7,phi:-16,theta:16</id>
     </readout>
   </readouts> 
 

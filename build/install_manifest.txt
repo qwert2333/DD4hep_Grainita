@@ -1,2 +1,0 @@
-/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/install/lib64/libDD4hepTutorials.components
-/afs/cern.ch/user/f/faguo/eos/FCCSW/DD4hep_Grainita/install/lib64/libDD4hepTutorials.so

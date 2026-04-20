@@ -11,6 +11,7 @@ dd4hep_configure_output()
 # Collect all source files
 set(SOURCES
   ${PROJECT_SOURCE_DIR}/Grainita_ECAL/src/Grainita_ECAL_Barrel_v01.cpp
+  ${PROJECT_SOURCE_DIR}/Grainita_ECAL/src/Grainita_ECAL_Barrel_v02.cpp
 )
 add_compile_options(-Wno-unused-variable)
 
@@ -30,3 +31,5 @@ dd4hep_add_plugin(${PROJECT_NAME} SOURCES ${SOURCES} USES
 #  ${PROJECT_SOURCE_DIR}/simplecalo2/include
 #)
 
+add_subdirectory(sdaction)
+add_subdirectory(detectorSegmentations)

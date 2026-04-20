@@ -1,9 +1,9 @@
 //**************************************************************************
-// \file    Grainita_ECAL_Barrel_v01.cpp
-// \brief:  Grainita ECAL full detector geometry (first ver.)
+// \file    Grainita_ECAL_Barrel_v02.cpp
+// \brief:  Grainita ECAL full detector geometry, with pointing structure
 // \author: Fangyi Guo (fangyi.guo@cern.ch) start from DD4HEP tutorial in 
 //          DRD Calo (https://github.com/DRDCalo/DD4hepTutorials)
-// \date:   March 2026
+// \date:   April 2026
 //**************************************************************************
 
 // Includers from DD4hep
@@ -16,7 +16,7 @@ using namespace dd4hep;
 //
 static Ref_t create_detector(Detector &description, xml_h e,
                              SensitiveDetector sens) {
-  std::cout << "--> Grainita_ECAL_Barrel_v01::create_detector() start" << std::endl;
+  std::cout << "--> Grainita_ECAL_Barrel_v02::create_detector() start" << std::endl;
 
   // Get info from the xml file
   //
@@ -48,15 +48,21 @@ static Ref_t create_detector(Detector &description, xml_h e,
   auto crystal_thick = description.constant<double>("CrystalThickness");
   auto back_space = description.constant<double>("BackSpace");
   auto halfZ = description.constant<double>("HalfZ");
+
   auto fiber_r = description.constant<double>("FiberRadius");
   auto cladding_thick = description.constant<double>("CladdingThickness");
+
   auto nSec_phi = description.constant<int>("NumberOfPhiSectors");
   auto nModule_z = description.constant<int>("NumberOfZModules");
+
   auto dPhi_fiber = description.constant<double>("FiberSeg_DPhi"); //Unit in degree
   auto dz_fiber = description.constant<double>("FiberSeg_Dz");
+
   auto Cframe_thick = description.constant<double>("FrameThickness");
   auto Cseg_thick = description.constant<double>("SegThickness");
-  double outerR = innerR + crystal_thick + back_space + 2*Cframe_thick; 
+
+  double dphi_sec = 2*M_PI/nSec_phi;
+  double outerR = (innerR + crystal_thick + back_space + 2*Cframe_thick)/cos(dphi_sec/2.); 
   std::cout<<"  -- Dimension: inner R "<<innerR<<", outer R "<<outerR<<", half Z "<<halfZ<<std::endl;
   std::cout<<"     Z segmentation: "<<nModule_z<<", Phi segmentation: "<<nSec_phi<<std::endl;
 
@@ -68,9 +74,10 @@ static Ref_t create_detector(Detector &description, xml_h e,
   Volume EcalBarrelVol("EcalBarrel", EcalBarrel, air);
 
   // ====== Carbon fiber frame as supporting, at inner and outer of barrel. ====== //
-  TGeoTube* innerFrame = new TGeoTube(innerR, innerR+Cframe_thick, halfZ);
+  PolyhedraRegular innerFrame(nSec_phi, -dphi_sec/2., innerR, innerR + Cframe_thick, 2*halfZ);
   Volume innerFrame_vol("InnerCarbonFrame", innerFrame, MatCarbonfiber);
-  TGeoTube* outerFrame = new TGeoTube(outerR-Cframe_thick, outerR, halfZ);
+
+  PolyhedraRegular outerFrame(nSec_phi, -dphi_sec/2., outerR*cos(dphi_sec/2.)-Cframe_thick, outerR*cos(dphi_sec/2.), 2*halfZ);
   Volume outerFrame_vol("outerCarbonFrame", outerFrame, MatCarbonfiber);
 
   innerFrame_vol.setVisAttributes(description, "CarbonFrameVis");
@@ -80,13 +87,83 @@ static Ref_t create_detector(Detector &description, xml_h e,
 
   
   // ======== Define a sector ======== //
-  double dphi_sec = 360./nSec_phi; // In degree
-  double half_dz_sec = halfZ/nModule_z; 
-  double dphi_seg = Cseg_thick / innerR * (180./M_PI);
-  TGeoTubeSeg* Sector = new TGeoTubeSeg(innerR+Cframe_thick, outerR-Cframe_thick, half_dz_sec, 0., dphi_sec);
-  Volume Sector_vol("sector_vol", Sector, air);
-  std::cout<<"  ---- For one sector: dPhi = "<<dphi_sec<<", dZ = "<<half_dz_sec<<std::endl;
+  double innerR_sector = innerR+Cframe_thick;
+  double outerR_sector = outerR*cos(dphi_sec/2.)-Cframe_thick;
 
+  double inner_width = innerR_sector*tan(dphi_sec/2.);
+  double outer_width = outerR_sector*tan(dphi_sec/2.);
+  Trap Sector( (crystal_thick+back_space)/2., 0, 0, inner_width, halfZ, halfZ, 0., outer_width, halfZ, halfZ, 0.);
+  Volume Sector_vol("sector_vol", Sector, air);
+
+  double theta_min = atan(outerR_sector/(halfZ-Cframe_thick));
+  double theta_max = M_PI - theta_min; 
+  double theta_module = (theta_max-theta_min)/nModule_z; 
+  for(int iz=0; iz<nModule_z; iz++){
+
+    double theta_min_module = theta_min + iz*theta_module; 
+    double theta_max_module = theta_min_module + theta_module; 
+
+    double innerZ_module = innerR_sector/tan(theta_min_module) - innerR_sector/tan(theta_max_module);
+    double outerZ_module = outerR_sector/tan(theta_min_module) - outerR_sector/tan(theta_max_module);
+    double height_module;
+    if(theta_max_module<M_PI/2.){
+      height_module = (crystal_thick+back_space)*sin(theta_max_module);
+    }
+    else{
+      height_module = (crystal_thick+back_space)*sin(theta_min_module);
+    }
+    double outer_width_module = (innerR_sector+height_module)*tan(dphi_sec/2.); 
+
+    std::cout<<"Module #"<<iz<<" Geometry parameters: "<<std::endl;
+    std::cout<<"  Theta range: "<<theta_min_module<<", "<<theta_max_module<<std::endl;
+    std::cout<<"  height: "<<height_module<<", width "<<inner_width<<", inner Z: "<<innerZ_module<<", outer Z: "<<outerZ_module<<std::endl;
+    std::cout<<"  Position: "<<std::endl;
+    std::cout<<"    Inner surface "<<-height_module/2.-(crystal_thick+back_space-height_module)/2.<<", outer surface "<<height_module/2.-(crystal_thick+back_space-height_module)/2.<<std::endl;
+    std::cout<<"    Inner Z cover range: "<<innerR_sector/tan(theta_min_module)<<", "<<innerR_sector/tan(theta_max_module)<<std::endl;
+    std::cout<<"    Outer Z cover range: "<<outerR_sector/tan(theta_min_module)<<", "<<outerR_sector/tan(theta_max_module)<<std::endl;
+
+    double vertices_frame[16] = {
+      innerR_sector/tan(theta_min_module), inner_width,
+      innerR_sector/tan(theta_min_module), -inner_width,
+      innerR_sector/tan(theta_max_module), -inner_width,
+      innerR_sector/tan(theta_max_module), inner_width,
+
+      (innerR_sector+height_module)/tan(theta_min_module), outer_width_module,
+      (innerR_sector+height_module)/tan(theta_min_module), -outer_width_module,
+      (innerR_sector+height_module)/tan(theta_max_module), -outer_width_module,
+      (innerR_sector+height_module)/tan(theta_max_module), outer_width_module,
+    };
+
+    double vertices_crystal[16] = {
+      innerR_sector/tan(theta_min_module)-Cseg_thick, inner_width-Cseg_thick,
+      innerR_sector/tan(theta_min_module)-Cseg_thick, -inner_width+Cseg_thick,
+      innerR_sector/tan(theta_max_module)+Cseg_thick, -inner_width+Cseg_thick,
+      innerR_sector/tan(theta_max_module)+Cseg_thick, inner_width-Cseg_thick,
+
+      (innerR_sector+height_module)/tan(theta_min_module)-Cseg_thick, outer_width_module-Cseg_thick,
+      (innerR_sector+height_module)/tan(theta_min_module)-Cseg_thick, -outer_width_module+Cseg_thick,
+      (innerR_sector+height_module)/tan(theta_max_module)+Cseg_thick, -outer_width_module+Cseg_thick,
+      (innerR_sector+height_module)/tan(theta_max_module)+Cseg_thick, outer_width_module-Cseg_thick,
+    };
+
+    EightPointSolid ModuleFrame(Form("Module_%d", iz), height_module/2., vertices_frame );
+    Volume ModuleFrame_vol(Form("module_vol%d", iz), ModuleFrame, MatCarbonfiber);
+    ModuleFrame_vol.setVisAttributes(description, "CarbonFrameVis");
+
+    EightPointSolid ModuleCrystal(Form("ModuleCrystal_%d", iz), height_module/2., vertices_crystal );
+    Volume ModuleCrystal_vol(Form("moduleCrystal_vol%d", iz), ModuleCrystal, MatCrystal);
+    ModuleCrystal_vol.setVisAttributes(description, "SensitiveVis");
+    ModuleCrystal_vol.setSensitiveDetector(sens);
+
+    PlacedVolume pv = ModuleFrame_vol.placeVolume(ModuleCrystal_vol);
+    pv.addPhysVolID("stave", iz);
+
+    Transform3D tr(Translation3D(0, 0, -(crystal_thick+back_space-height_module)/2.));
+    Sector_vol.placeVolume(ModuleFrame_vol, tr);
+  }
+
+
+/*
   //    ------- Carbon fiber at 4 sides --------    //
   Assembly carbon_frame("carbon_frame");
 
@@ -116,6 +193,7 @@ static Ref_t create_detector(Detector &description, xml_h e,
   carbon_frame.setVisAttributes(description, "CarbonFrameVis");
   Sector_vol.placeVolume(carbon_frame);
 
+
   //    ------- Sensitive material: Grains subtract the holes -------  //
   TGeoTubeSeg* Crystal_module = new TGeoTubeSeg( innerR+Cframe_thick, 
                                           innerR+Cframe_thick+crystal_thick, 
@@ -127,7 +205,7 @@ static Ref_t create_detector(Detector &description, xml_h e,
   crystal_vol.setSensitiveDetector(sens);
   crystal_vol.setVisAttributes(description, "SensitiveVis");
 
-/*
+
   Tube hole(0., (fiber_r + cladding_thick)+0.002*mm, crystal_thick/2.0);
 
   Solid crystal_solid(Crystal_module);
@@ -210,26 +288,18 @@ static Ref_t create_detector(Detector &description, xml_h e,
       Sector_vol.placeVolume(fiberCladVol, tr);
     }
   }
-*/
+
 
   Sector_vol.placeVolume(crystal_vol);
+*/
 
-
-  // ========  Loop to place sectors in the whole cylender  ========  //
-  for(int isec_z=0; isec_z<nModule_z; isec_z++){
-    for(int isec_phi=0; isec_phi<nSec_phi; isec_phi++) {
-
-      double phi = isec_phi * dphi_sec * M_PI/180.0;
-      double zpos = -halfZ + (isec_z+0.5)*half_dz_sec*2;
-
-      Transform3D tr(RotationZ(phi), Position(0,0,zpos));
-
-      PlacedVolume pv = EcalBarrelVol.placeVolume(Sector_vol, tr);
-      pv.addPhysVolID("sector", isec_phi);
-      pv.addPhysVolID("module",isec_z);
-    }
+  // ========  Loop to place sectors  ========  //
+  for(int isec_phi=0; isec_phi<nSec_phi; isec_phi++){
+    double phi = isec_phi * dphi_sec;
+    Transform3D tr(RotationY(M_PI/2.0), Translation3D(innerR_sector+(crystal_thick+back_space)/2., 0, 0));
+    PlacedVolume pv = EcalBarrelVol.placeVolume(Sector_vol, RotationZ(phi) * tr);
+    pv.addPhysVolID("sector", isec_phi);
   }
-
 
   // Finalize geometry
 
@@ -239,10 +309,10 @@ static Ref_t create_detector(Detector &description, xml_h e,
   EcalBarrel_plv.addPhysVolID("system", x_det.id());
   ECAL.setPlacement(EcalBarrel_plv);
 
-  std::cout << "--> Grainita_ECAL_Barrel_v01::create_detector() end" << std::endl;
+  std::cout << "--> Grainita_ECAL_Barrel_v02::create_detector() end" << std::endl;
   return ECAL;
 }
 
-DECLARE_DETELEMENT(Grainita_ECAL_Barrel_v01, create_detector)
+DECLARE_DETELEMENT(Grainita_ECAL_Barrel_v02, create_detector)
 
 //**************************************************************************

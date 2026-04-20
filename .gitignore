@@ -21,6 +21,10 @@
 *.so
 *.dylib
 *.dll
+build*
+build/
+install/
+install*
 
 # Fortran module files
 *.mod
@@ -39,3 +43,6 @@
 
 # debug information files
 *.dwo
+
+# data
+*.root
