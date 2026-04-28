@@ -25,18 +25,24 @@
     <constant name="world_y" value="world_size"/>
     <constant name="world_z" value="world_size"/>
 
+    <!-- Global structure -->
     <constant name="InnerRadius"          value="220*cm"/>
-    <constant name="CrystalThickness"     value="40*cm"/>
-    <constant name="BackSpace"            value="1*cm"/>
+    <constant name="CrystalThickness"     value="40.5*cm"/>
+    <constant name="BackSpace"            value="1.8*cm"/>
     <constant name="HalfZ"                value="230*cm"/>
     <constant name="NumberOfPhiSectors"   value="72"/>
     <constant name="NumberOfZModules"     value="15"/>
-    <constant name="FrameThickness"       value="2*mm"/>
-    <constant name="SegThickness"         value="1.*mm"/>
+
+    <!-- Module -->
+    <constant name="FrameThickness"       value="10*mm"/>
+    <constant name="SegThickness"         value="5.*mm"/>
+    <constant name="ModuleTiltAngle"      value="0.0"/>       <!-- Angle in IP, Unit in degree -->
+
+    <!-- Cell -->
     <constant name="FiberRadius"          value="0.5*mm"/>
     <constant name="CladdingThickness"    value="0.3*mm"/>
-    <constant name="FiberSeg_DPhi"        value="0.2"/>         <!--Unit in degree -->
-    <constant name="FiberSeg_Dz"          value="7*mm"/>
+    <constant name="FiberPitchSize"       value="7*mm"/>   
+
   </define>
 
   <includes>
@@ -53,7 +59,7 @@
     <vis name="Invisible"        alpha="0.0" r="0.0" g="0.0"  b="0.0"   showDaughters="false" visible="false"/>
     <vis name="SeeThrough"       alpha="0.0" r="0.0" g="0.0"  b="0.0"   showDaughters="true"  visible="false"/>
 
-    <vis name="CaloVis" alpha="1.0" r="0.0" g="1.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="CaloVis" alpha="1.0" r="0.0" g="1.0" b="0.0" showDaughters="false" visible="true"/>
     <vis name="CaloLayerVis" alpha="1.0" r="0.0" g="0.0" b="1.0" showDaughters="true" visible="true"/>
     <vis name="CarbonFrameVis" alpha="1.0" r="0.375" g="0.375" b="0.375" showDaughters="true" visible="true"/>
     <vis name="SensitiveVis" alpha="1.0" r="0.4" g="0.7" b="1.0" showDaughters="false" visible="true"/>
@@ -67,7 +73,7 @@
        If a detector contains sub-detectors, their information must be included as below.
   -->
   <detectors>
-    <detector name="Grainita_ECAL_Barrel_v02" type="Grainita_ECAL_Barrel_v02" vis="CaloVis" id ="10" readout="GrainitaEcalBarrelRO" material="MixGrains">
+    <detector name="Grainita_ECAL_Barrel_v02" type="Grainita_ECAL_Barrel_v02" vis="CaloVis" id ="10" readout="GrainitaEcalBarrelRO" material="WaterMixGrains">
     <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_BARREL"/>
     </detector>
   </detectors>
@@ -76,10 +82,12 @@
 
   <readouts>
     <readout name="GrainitaEcalBarrelRO">
-      <segmentation type="FCCSWGridPhiTheta_k4geo"
+      <segmentation type="FCCSWModularRhoPhiTheta_k4geo"
               phi_bins="1975"
-              grid_size_theta="0.003"/>
-      <id>system:5,stave:6,sector:7,phi:-16,theta:16</id>
+              grid_size_theta="0.0032"
+              grid_rho="CrystalThickness/4.+5*mm"
+              offset_R="InnerRadius+FrameThickness+(CrystalThickness/4.+5*mm)/2.-5*mm"/>
+      <id>system:5,stave:6,sector:7,phi:-16,theta:16,rho:4</id>
     </readout>
   </readouts> 
 

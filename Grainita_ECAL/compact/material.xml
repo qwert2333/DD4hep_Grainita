@@ -46,8 +46,20 @@
 
     <material name="MixGrains">
       <D type="density" unit="g/cm3" value="5.72" />
-      <fraction n="0.576" ref="ZnWO4" />
-      <fraction n="0.424" ref="HeavyLiquid" />
+      <fraction n="0.7923" ref="ZnWO4" />
+      <fraction n="0.2077" ref="HeavyLiquid" />
+    </material>
+
+    <material name="AirMixGrains">
+      <D type="density" unit="g/cm3" value="4.534" />
+      <fraction n="0.9998" ref="ZnWO4" />
+      <fraction n="0.0002" ref="Air" />
+    </material>
+
+    <material name="WaterMixGrains">
+      <D type="density" unit="g/cm3" value="4.957" />
+      <fraction n="0.9145" ref="ZnWO4" />
+      <fraction n="0.0855" ref="Water" />
     </material>
 
 

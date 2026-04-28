@@ -1,5 +1,7 @@
 from DDSim.DD4hepSimulation import DD4hepSimulation
 from g4units import mm, m, cm, GeV, MeV
+import math
+
 SIM = DD4hepSimulation()
 
 
@@ -17,14 +19,14 @@ SIM.inputFiles = []
 ## Macro file to execute for runType 'run' or 'vis'
 SIM.macroFile = ""
 ## number of events to simulate, used in batch mode
-SIM.numberOfEvents = 10
+SIM.numberOfEvents = 10000
 ## Outputfile from the simulation: .slcio, edm4hep.root and .root output files are supported
-SIM.outputFile = "simplecalo_mu.root"
+SIM.outputFile = "simplecalo_tilt0.0_gamma_2GeV_phi0_theta90.root"
 ## Physics list to use in simulation
 SIM.physicsList = None
 ## Verbosity use integers from 1(most) to 7(least) verbose
 ## or strings: VERBOSE, DEBUG, INFO, WARNING, ERROR, FATAL, ALWAYS
-SIM.printLevel = "INFO"
+SIM.printLevel = "ERROR"
 ## The type of action to do in this invocation
 ## batch: just simulate some events, needs numberOfEvents, and input file or gun
 ## vis: enable visualisation, run the macroFile if it is set
@@ -251,7 +253,7 @@ SIM.guineapig.particlesPerEvent = "-1"
 ################################################################################
 
 ##  direction of the particle gun, 3 vector 
-SIM.gun.direction = (1., 0., 0.)
+SIM.gun.direction = (0., 1., 0.)
 
 ## choose the distribution of the random direction for theta
 ## 
@@ -269,7 +271,7 @@ SIM.gun.distribution = 'uniform'
 ## Total energy (including mass) for the particle gun.
 ## 
 ## If not None, it will overwrite the setting of momentumMin and momentumMax
-SIM.gun.energy = 10.0*GeV
+SIM.gun.energy = 2.0*GeV
 
 ## Maximal pseudorapidity for random distibution (overrides thetaMin)
 SIM.gun.etaMax = None
@@ -290,22 +292,22 @@ SIM.gun.isotrop = False
 ## Minimal momentum when using distribution (default = 0.0)
 ##SIM.gun.momentumMin = 0.0
 SIM.gun.multiplicity = 1
-SIM.gun.particle = "mu-"
+SIM.gun.particle = "gamma"
 
 ## Maximal azimuthal angle for random distribution
-SIM.gun.phiMax = None
+SIM.gun.phiMax = 0*math.pi/180.
 
 ## Minimal azimuthal angle for random distribution
-SIM.gun.phiMin = None
+SIM.gun.phiMin = 0*math.pi/180.
 
 ##  position of the particle gun, 3 vector 
 SIM.gun.position = (0.0, 0.0, 0.0)
 
 ## Maximal polar angle for random distribution
-SIM.gun.thetaMax = 60.
+SIM.gun.thetaMax = 90*math.pi/180.
 
 ## Minimal polar angle for random distribution
-SIM.gun.thetaMin = 120.
+SIM.gun.thetaMin = 90*math.pi/180.
 
 
 ################################################################################
@@ -467,7 +469,7 @@ SIM.part.keepAllParticles = False
 SIM.part.minDistToParentVertex = 2.2e-14
 
 ## MinimalKineticEnergy to store particles created in the tracking region
-##SIM.part.minimalKineticEnergy = 1.0
+SIM.part.minimalKineticEnergy = 1.*GeV
 
 ##  Printout at End of Tracking 
 SIM.part.printEndTracking = False

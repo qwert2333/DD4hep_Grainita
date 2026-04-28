@@ -27,7 +27,7 @@
 #include "G4TouchableHandle.hh"
 #include <cmath>
 
-#define DEBUG
+//#define DEBUG
 
 namespace dd4hep {
 namespace sim {
@@ -99,23 +99,26 @@ namespace sim {
 
     G4TouchableHandle theTouchable = aStep->GetPreStepPoint()->GetTouchableHandle();
     G4ThreeVector global = (aStep->GetPreStepPoint()->GetPosition() + aStep->GetPostStepPoint()->GetPosition() )/2.;
-    G4ThreeVector local = theTouchable->GetHistory()->GetTopTransform().TransformPoint(global);
-    dd4hep::Position loc(local.x() * dd4hep::millimeter / CLHEP::millimeter,
-                         local.y() * dd4hep::millimeter / CLHEP::millimeter,
-                         local.z() * dd4hep::millimeter / CLHEP::millimeter);
+    //G4ThreeVector local = theTouchable->GetHistory()->GetTopTransform().TransformPoint(global);
+    //dd4hep::Position loc(local.x() * dd4hep::millimeter / CLHEP::millimeter,
+    //                     local.y() * dd4hep::millimeter / CLHEP::millimeter,
+    //                     local.z() * dd4hep::millimeter / CLHEP::millimeter);
     dd4hep::Position glob(global.x() * dd4hep::millimeter / CLHEP::millimeter,
                           global.y() * dd4hep::millimeter / CLHEP::millimeter,
                           global.z() * dd4hep::millimeter / CLHEP::millimeter);
 
-    auto cellID = m_segmentation->cellID(loc, glob, VolID);
-    auto phiID = m_segmentation->decoder()->get(cellID, "phi");
-    auto thetaID = m_segmentation->decoder()->get(cellID, "theta");
+    auto cellID = m_segmentation->cellID(glob, glob, VolID);
+    auto hitpos_dd4hep = m_segmentation->position(cellID); // in cm
+    G4ThreeVector HitCellPos(hitpos_dd4hep.x()*dd4hep::centimeter/dd4hep::millimeter, hitpos_dd4hep.y()*dd4hep::centimeter/dd4hep::millimeter, hitpos_dd4hep.z()*dd4hep::centimeter/dd4hep::millimeter );
 
 #ifdef DEBUG
+    auto phiID = m_segmentation->decoder()->get(cellID, "phi");
+    auto thetaID = m_segmentation->decoder()->get(cellID, "theta");
     std::cout<<"--> Step global position: ("<<global.x()<<", "<<global.y()<<", "<<global.z()<<") ";
     std::cout<<" (theta, phi) = "<<"("<<global.theta()<<", "<<global.phi()<<") "<<std::endl;
-    std::cout<<"    local position: ("<<local.x()<<", "<<local.y()<<", "<<local.z()<<") "<<std::endl;
-    std::cout<<"  phiID: "<<phiID<<", thetaID "<<thetaID<<std::endl;
+    //std::cout<<"    local position: ("<<local.x()<<", "<<local.y()<<", "<<local.z()<<") "<<std::endl;
+    std::cout<<"  phiID: "<<phiID<<", thetaID "<<thetaID<<", cellID "<<cellID<<std::endl;
+    std::cout<<"  Cell position from segmentation: "<<HitCellPos.x()<<", "<<HitCellPos.y()<<", "<<HitCellPos.z()<<std::endl;
 #endif
 
     // Create the hits and accumulate contributions from multiple steps
@@ -126,7 +129,6 @@ namespace sim {
     if (!hit) { // if the hit does not exist yet, create it
       hit = new Geant4Calorimeter::Hit();
       hit->cellID = cellID;
-      Position HitCellPos(global.x(), global.y(), global.z());
       hit->position = HitCellPos; // this should be assigned only once
       hit->energyDeposit = aStep->GetTotalEnergyDeposit();
 
@@ -138,12 +140,12 @@ namespace sim {
       contrib.pdgID = aStep->GetTrack()->GetParticleDefinition()->GetPDGEncoding();
       contrib.deposit = aStep->GetTotalEnergyDeposit();
       contrib.time = aStep->GetPreStepPoint()->GetGlobalTime();
-      contrib.x = HitCellPos.x();
-      contrib.y = HitCellPos.y();
-      contrib.z = HitCellPos.z();
+      contrib.x = global.x();
+      contrib.y = global.y();
+      contrib.z = global.z();
       hit->truth.emplace_back(contrib);
 
-      coll->add(VolID, hit); // add the hit to the hit collection
+      coll->add(cellID, hit); // add the hit to the hit collection
     } else {                 // if the hit exists already, increment its fields
       hit->energyDeposit += aStep->GetTotalEnergyDeposit();
 
@@ -155,10 +157,9 @@ namespace sim {
       contrib.pdgID = aStep->GetTrack()->GetParticleDefinition()->GetPDGEncoding();
       contrib.deposit = aStep->GetTotalEnergyDeposit();
       contrib.time = aStep->GetPreStepPoint()->GetGlobalTime();
-      Position HitCellPos(global.x(), global.y(), global.z());
-      contrib.x = HitCellPos.x();
-      contrib.y = HitCellPos.y();
-      contrib.z = HitCellPos.z();
+      contrib.x = global.x();
+      contrib.y = global.y();
+      contrib.z = global.z();
       hit->truth.emplace_back(contrib);
     }
 

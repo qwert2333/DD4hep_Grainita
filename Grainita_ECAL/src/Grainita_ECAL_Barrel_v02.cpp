@@ -48,23 +48,45 @@ static Ref_t create_detector(Detector &description, xml_h e,
   auto crystal_thick = description.constant<double>("CrystalThickness");
   auto back_space = description.constant<double>("BackSpace");
   auto halfZ = description.constant<double>("HalfZ");
-
-  auto fiber_r = description.constant<double>("FiberRadius");
-  auto cladding_thick = description.constant<double>("CladdingThickness");
-
   auto nSec_phi = description.constant<int>("NumberOfPhiSectors");
   auto nModule_z = description.constant<int>("NumberOfZModules");
 
-  auto dPhi_fiber = description.constant<double>("FiberSeg_DPhi"); //Unit in degree
-  auto dz_fiber = description.constant<double>("FiberSeg_Dz");
-
   auto Cframe_thick = description.constant<double>("FrameThickness");
   auto Cseg_thick = description.constant<double>("SegThickness");
+  auto module_tilt = description.constant<double>("ModuleTiltAngle"); //Unit in degree
+  double module_tilt_rad = module_tilt*M_PI/180.;
+
+  auto fiber_r = description.constant<double>("FiberRadius");
+  auto cladding_thick = description.constant<double>("CladdingThickness");
+  auto fiber_pitch = description.constant<double>("FiberPitchSize"); 
+
 
   double dphi_sec = 2*M_PI/nSec_phi;
   double outerR = (innerR + crystal_thick + back_space + 2*Cframe_thick)/cos(dphi_sec/2.); 
   std::cout<<"  -- Dimension: inner R "<<innerR<<", outer R "<<outerR<<", half Z "<<halfZ<<std::endl;
   std::cout<<"     Z segmentation: "<<nModule_z<<", Phi segmentation: "<<nSec_phi<<std::endl;
+
+  //Calculate the shift from phi direction tilt. 
+
+  double tmp_slope1 = (outerR*sin(dphi_sec/2.-module_tilt_rad) - innerR*sin(dphi_sec/2.)) / 
+                      (outerR*cos(dphi_sec/2.-module_tilt_rad) - innerR*cos(dphi_sec/2.));
+  double tmp_intercept1 = innerR*sin(dphi_sec/2) - innerR*cos(dphi_sec/2)*tmp_slope1;
+
+  double tmp_slope2 = (outerR*sin(dphi_sec/2+module_tilt_rad) - innerR*sin(dphi_sec/2)) /
+                      (outerR*cos(dphi_sec/2+module_tilt_rad) - innerR*cos(dphi_sec/2));
+  double tmp_intercept2 = innerR*sin(dphi_sec/2) - innerR*cos(dphi_sec/2)*tmp_slope2;
+
+  double shift_phi = fabs(outerR*sin(dphi_sec/2.) - ( tmp_slope2*outerR*cos(dphi_sec/2.)+tmp_intercept2 ) );
+  outerR = sqrt( pow(outerR*cos(dphi_sec/2.), 2.) + pow((outerR*sin(dphi_sec/2.) + shift_phi) , 2.) );
+
+  std::cout<<"-- Consider a tilt angle in phi to avoid pointing cracks. Tilt angle (in deg): "<<module_tilt<<", in rad: "<<module_tilt_rad<<std::endl;
+  std::cout<<"Input vars: Rin "<<innerR<<", Rout "<<outerR<<", phi "<<dphi_sec/2.<<", delta "<<module_tilt_rad<<std::endl;
+  std::cout<<"  Calculate the new boundary lines: "<<std::endl;
+  std::cout<<"    in -y side: k = "<<tmp_slope1<<", b = "<<tmp_intercept1<<std::endl;
+  std::cout<<"    in +y side: k = "<<tmp_slope2<<", b = "<<tmp_intercept2<<std::endl;
+  std::cout<<"  Calculated +y direction shift: "<<shift_phi<<std::endl;
+  std::cout<<"  Outer radius considering this: "<<outerR<<std::endl;
+
 
   // Create the geometry
   DetElement ECAL(det_name, x_det.id());
@@ -77,7 +99,7 @@ static Ref_t create_detector(Detector &description, xml_h e,
   PolyhedraRegular innerFrame(nSec_phi, -dphi_sec/2., innerR, innerR + Cframe_thick, 2*halfZ);
   Volume innerFrame_vol("InnerCarbonFrame", innerFrame, MatCarbonfiber);
 
-  PolyhedraRegular outerFrame(nSec_phi, -dphi_sec/2., outerR*cos(dphi_sec/2.)-Cframe_thick, outerR*cos(dphi_sec/2.), 2*halfZ);
+  PolyhedraRegular outerFrame(nSec_phi, -dphi_sec/2.+module_tilt*M_PI/180., outerR*cos(dphi_sec/2.)-Cframe_thick, outerR*cos(dphi_sec/2.), 2*halfZ);
   Volume outerFrame_vol("outerCarbonFrame", outerFrame, MatCarbonfiber);
 
   innerFrame_vol.setVisAttributes(description, "CarbonFrameVis");
@@ -87,40 +109,77 @@ static Ref_t create_detector(Detector &description, xml_h e,
 
   
   // ======== Define a sector ======== //
-  double innerR_sector = innerR+Cframe_thick;
-  double outerR_sector = outerR*cos(dphi_sec/2.)-Cframe_thick;
+  double innerR_sector = innerR + Cframe_thick;
+  double outerR_sector = innerR_sector + crystal_thick;
 
   double inner_width = innerR_sector*tan(dphi_sec/2.);
   double outer_width = outerR_sector*tan(dphi_sec/2.);
-  Trap Sector( (crystal_thick+back_space)/2., 0, 0, inner_width, halfZ, halfZ, 0., outer_width, halfZ, halfZ, 0.);
+
+
+  tmp_slope1 = (outerR_sector*sin(dphi_sec/2-module_tilt_rad) - innerR_sector*sin(dphi_sec/2)) /
+               (outerR_sector*cos(dphi_sec/2-module_tilt_rad) - innerR_sector*cos(dphi_sec/2));
+  tmp_intercept1 = innerR_sector*sin(dphi_sec/2) - innerR_sector*cos(dphi_sec/2)*tmp_slope1;
+  tmp_slope2 = (outerR_sector*sin(dphi_sec/2+module_tilt_rad) - innerR_sector*sin(dphi_sec/2)) /
+               (outerR_sector*cos(dphi_sec/2+module_tilt_rad) - innerR_sector*cos(dphi_sec/2));
+  tmp_intercept2 = innerR_sector*sin(dphi_sec/2) - innerR_sector*cos(dphi_sec/2)*tmp_slope2;
+
+  double shift_phi_neg = fabs(outerR_sector*sin(dphi_sec/2.) - ( tmp_slope1*outerR_sector*cos(dphi_sec/2.)+tmp_intercept1 ) );
+  double shift_phi_pos = fabs(outerR_sector*sin(dphi_sec/2.) - ( tmp_slope2*outerR_sector*cos(dphi_sec/2.)+tmp_intercept2 ) );
+
+  std::cout<<"  Calculate the new boundary lines: "<<std::endl;
+  std::cout<<"    in -y side: k = "<<tmp_slope1<<", b = "<<tmp_intercept1<<std::endl;
+  std::cout<<"    in +y side: k = "<<tmp_slope2<<", b = "<<tmp_intercept2<<std::endl;
+  std::cout<<"  Calculated +y direction shift: "<<shift_phi_pos<<std::endl;
+  std::cout<<"  Calculated -y direction shift: "<<shift_phi_neg<<std::endl;
+
+
+  double vertices_sector[16] = {
+    halfZ,  inner_width,
+    halfZ,  -inner_width,
+    -halfZ, -inner_width,
+    -halfZ, inner_width,
+
+    halfZ,  outer_width+shift_phi_pos,
+    halfZ,  -outer_width+shift_phi_neg,
+    -halfZ, -outer_width+shift_phi_neg,
+    -halfZ, outer_width+shift_phi_pos,
+  };
+
+  EightPointSolid Sector("Sector", (crystal_thick)/2., vertices_sector );
   Volume Sector_vol("sector_vol", Sector, air);
+  //Sector_vol.setVisAttributes(description, "CaloVis");
+
 
   double theta_min = atan(outerR_sector/(halfZ-Cframe_thick));
   double theta_max = M_PI - theta_min; 
   double theta_module = (theta_max-theta_min)/nModule_z; 
   for(int iz=0; iz<nModule_z; iz++){
-
+//if(iz!=5 && iz!=6) continue;
     double theta_min_module = theta_min + iz*theta_module; 
     double theta_max_module = theta_min_module + theta_module; 
+    double tilt_min = theta_min_module<M_PI/2. ? -module_tilt*M_PI/180. : module_tilt*M_PI/180.; 
+    double tilt_max = theta_max_module<M_PI/2. ? -module_tilt*M_PI/180. : module_tilt*M_PI/180.; 
 
-    double innerZ_module = innerR_sector/tan(theta_min_module) - innerR_sector/tan(theta_max_module);
-    double outerZ_module = outerR_sector/tan(theta_min_module) - outerR_sector/tan(theta_max_module);
+    //double height_module = crystal_thick * std::max(sin(theta_max_module), sin(theta_min_module));
     double height_module;
     if(theta_max_module<M_PI/2.){
-      height_module = (crystal_thick+back_space)*sin(theta_max_module);
+      height_module = (crystal_thick)*sin(theta_max_module);
     }
     else{
-      height_module = (crystal_thick+back_space)*sin(theta_min_module);
+      height_module = (crystal_thick)*sin(theta_min_module);
     }
+
     double outer_width_module = (innerR_sector+height_module)*tan(dphi_sec/2.); 
+    shift_phi_neg = fabs((innerR_sector+height_module)*sin(dphi_sec/2.) - ( tmp_slope1*(innerR_sector+height_module)*cos(dphi_sec/2.)+tmp_intercept1 ) );
+    shift_phi_pos = fabs((innerR_sector+height_module)*sin(dphi_sec/2.) - ( tmp_slope2*(innerR_sector+height_module)*cos(dphi_sec/2.)+tmp_intercept2 ) );
+
 
     std::cout<<"Module #"<<iz<<" Geometry parameters: "<<std::endl;
-    std::cout<<"  Theta range: "<<theta_min_module<<", "<<theta_max_module<<std::endl;
-    std::cout<<"  height: "<<height_module<<", width "<<inner_width<<", inner Z: "<<innerZ_module<<", outer Z: "<<outerZ_module<<std::endl;
-    std::cout<<"  Position: "<<std::endl;
-    std::cout<<"    Inner surface "<<-height_module/2.-(crystal_thick+back_space-height_module)/2.<<", outer surface "<<height_module/2.-(crystal_thick+back_space-height_module)/2.<<std::endl;
-    std::cout<<"    Inner Z cover range: "<<innerR_sector/tan(theta_min_module)<<", "<<innerR_sector/tan(theta_max_module)<<std::endl;
-    std::cout<<"    Outer Z cover range: "<<outerR_sector/tan(theta_min_module)<<", "<<outerR_sector/tan(theta_max_module)<<std::endl;
+    std::cout<<"  Theta range: "<<theta_min_module<<", "<<theta_max_module<<", tilt angle "<<tilt_min<<", "<<tilt_max<<std::endl;
+    std::cout<<"  height: "<<height_module<<", width "<<inner_width<<std::endl;
+    
+    //shift_phi_pos = 100;
+    //shift_phi_neg = 50;
 
     double vertices_frame[16] = {
       innerR_sector/tan(theta_min_module), inner_width,
@@ -128,11 +187,17 @@ static Ref_t create_detector(Detector &description, xml_h e,
       innerR_sector/tan(theta_max_module), -inner_width,
       innerR_sector/tan(theta_max_module), inner_width,
 
-      (innerR_sector+height_module)/tan(theta_min_module), outer_width_module,
-      (innerR_sector+height_module)/tan(theta_min_module), -outer_width_module,
-      (innerR_sector+height_module)/tan(theta_max_module), -outer_width_module,
-      (innerR_sector+height_module)/tan(theta_max_module), outer_width_module,
+      (innerR_sector+height_module)/tan(theta_min_module+tilt_min), outer_width_module+shift_phi_pos,
+      (innerR_sector+height_module)/tan(theta_min_module+tilt_min), -outer_width_module+shift_phi_neg,
+      (innerR_sector+height_module)/tan(theta_max_module+tilt_max), -outer_width_module+shift_phi_neg,
+      (innerR_sector+height_module)/tan(theta_max_module+tilt_max), outer_width_module+shift_phi_pos,
     };
+
+    std::cout<<"  Inner surface vertices: "<<std::endl;
+    for(int i=0; i<8; i+=2) std::cout<<"    ["<<vertices_frame[i]<<", "<<vertices_frame[i+1]<<"], "<<std::endl;
+    std::cout<<"  Outer surface vertices: "<<std::endl;
+    for(int i=8; i<16; i+=2) std::cout<<"    ["<<vertices_frame[i]<<", "<<vertices_frame[i+1]<<"], "<<std::endl;
+
 
     double vertices_crystal[16] = {
       innerR_sector/tan(theta_min_module)-Cseg_thick, inner_width-Cseg_thick,
@@ -140,10 +205,10 @@ static Ref_t create_detector(Detector &description, xml_h e,
       innerR_sector/tan(theta_max_module)+Cseg_thick, -inner_width+Cseg_thick,
       innerR_sector/tan(theta_max_module)+Cseg_thick, inner_width-Cseg_thick,
 
-      (innerR_sector+height_module)/tan(theta_min_module)-Cseg_thick, outer_width_module-Cseg_thick,
-      (innerR_sector+height_module)/tan(theta_min_module)-Cseg_thick, -outer_width_module+Cseg_thick,
-      (innerR_sector+height_module)/tan(theta_max_module)+Cseg_thick, -outer_width_module+Cseg_thick,
-      (innerR_sector+height_module)/tan(theta_max_module)+Cseg_thick, outer_width_module-Cseg_thick,
+      (innerR_sector+height_module)/tan(theta_min_module+tilt_min)-Cseg_thick, outer_width_module+shift_phi_pos-Cseg_thick,
+      (innerR_sector+height_module)/tan(theta_min_module+tilt_min)-Cseg_thick, -outer_width_module+shift_phi_neg+Cseg_thick,
+      (innerR_sector+height_module)/tan(theta_max_module+tilt_max)+Cseg_thick, -outer_width_module+shift_phi_neg+Cseg_thick,
+      (innerR_sector+height_module)/tan(theta_max_module+tilt_max)+Cseg_thick, outer_width_module+shift_phi_pos-Cseg_thick,
     };
 
     EightPointSolid ModuleFrame(Form("Module_%d", iz), height_module/2., vertices_frame );
@@ -158,7 +223,7 @@ static Ref_t create_detector(Detector &description, xml_h e,
     PlacedVolume pv = ModuleFrame_vol.placeVolume(ModuleCrystal_vol);
     pv.addPhysVolID("stave", iz);
 
-    Transform3D tr(Translation3D(0, 0, -(crystal_thick+back_space-height_module)/2.));
+    Transform3D tr(Translation3D(0, 0, -(crystal_thick-height_module)/2.));
     Sector_vol.placeVolume(ModuleFrame_vol, tr);
   }
 
@@ -293,10 +358,10 @@ static Ref_t create_detector(Detector &description, xml_h e,
   Sector_vol.placeVolume(crystal_vol);
 */
 
-  // ========  Loop to place sectors  ========  //
+  //========  Loop to place sectors  ========  //
   for(int isec_phi=0; isec_phi<nSec_phi; isec_phi++){
     double phi = isec_phi * dphi_sec;
-    Transform3D tr(RotationY(M_PI/2.0), Translation3D(innerR_sector+(crystal_thick+back_space)/2., 0, 0));
+    Transform3D tr(RotationY(M_PI/2.0), Translation3D(innerR_sector+(crystal_thick+back_space)/2., 0., 0.));
     PlacedVolume pv = EcalBarrelVol.placeVolume(Sector_vol, RotationZ(phi) * tr);
     pv.addPhysVolID("sector", isec_phi);
   }
