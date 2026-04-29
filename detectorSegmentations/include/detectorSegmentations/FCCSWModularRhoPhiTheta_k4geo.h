@@ -44,6 +44,7 @@ namespace DDSegmentation {
     double rho(const CellID cID) const;
     /// the grid size in rho
     double m_grid_rho;
+    std::vector<double> m_rhoBins;
 
     /// the coordinate offset in rho / R
     double m_offsetR;   // In cylinder case: offset depends on R not rho. 

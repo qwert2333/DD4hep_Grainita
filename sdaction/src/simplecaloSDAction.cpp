@@ -114,11 +114,13 @@ namespace sim {
 #ifdef DEBUG
     auto phiID = m_segmentation->decoder()->get(cellID, "phi");
     auto thetaID = m_segmentation->decoder()->get(cellID, "theta");
+    auto rhoID = m_segmentation->decoder()->get(cellID, "rho");
     std::cout<<"--> Step global position: ("<<global.x()<<", "<<global.y()<<", "<<global.z()<<") ";
-    std::cout<<" (theta, phi) = "<<"("<<global.theta()<<", "<<global.phi()<<") "<<std::endl;
+    std::cout<<" (theta, phi, rho) = "<<"("<<global.theta()<<", "<<global.phi()<<", "<<global.mag()<<") "<<std::endl;
     //std::cout<<"    local position: ("<<local.x()<<", "<<local.y()<<", "<<local.z()<<") "<<std::endl;
-    std::cout<<"  phiID: "<<phiID<<", thetaID "<<thetaID<<", cellID "<<cellID<<std::endl;
-    std::cout<<"  Cell position from segmentation: "<<HitCellPos.x()<<", "<<HitCellPos.y()<<", "<<HitCellPos.z()<<std::endl;
+    std::cout<<"  phiID: "<<phiID<<", thetaID "<<thetaID<<", rhoID "<<rhoID<<", cellID "<<cellID<<std::endl;
+    std::cout<<"  Cell position: ("<<HitCellPos.x()<<", "<<HitCellPos.y()<<", "<<HitCellPos.z()<<std::endl;
+    std::cout<<" (theta, phi, rho) = "<<"("<<HitCellPos.theta()<<", "<<HitCellPos.phi()<<", "<<HitCellPos.mag()<<") "<<std::endl;
 #endif
 
     // Create the hits and accumulate contributions from multiple steps

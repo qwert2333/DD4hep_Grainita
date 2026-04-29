@@ -1,4 +1,6 @@
 #include "detectorSegmentations/FCCSWModularRhoPhiTheta_k4geo.h"
+#include "DD4hep/Detector.h"
+
 
 namespace dd4hep {
 namespace DDSegmentation {
@@ -17,15 +19,18 @@ namespace DDSegmentation {
     // define type and description
     _type = "FCCSWModularRhoPhiTheta_k4geo";
     _description = "Rho-Phi-theta segmentation in the global coordinates";
+    m_rhoBins.clear();
 
     // register all necessary parameters (additional to those registered in GridTheta_k4geo)
     registerParameter("grid_rho", "Grid size in rho", m_grid_rho, 0., SegmentationParameter::LengthUnit, true);
+    registerParameter("rho_bins", "Non-uniform rho bins", m_rhoBins, std::vector<double>{}, SegmentationParameter::NoUnit, true);
     registerParameter("offset_R", "Offset in R", m_offsetR, 0., SegmentationParameter::LengthUnit, true);
     registerIdentifier("identifier_rho", "Cell ID identifier for rho", m_rhoID, "rho");
 
     m_thetaIndex = decoder()->index(fieldNameTheta());
     m_phiIndex = decoder()->index(fieldNamePhi());
     m_rhoIndex = decoder()->index(m_rhoID);
+
   }
 
 
@@ -46,7 +51,24 @@ namespace DDSegmentation {
     //dd4hep::Segmentation::positionToBin: int(floor((position + 0.5 * cellSize - offset) / cellSize));
     decoder()->set(cID, m_thetaIndex, positionToBin(lTheta, gridSizeTheta(), offsetTheta()));
     decoder()->set(cID, m_phiIndex, positionToBin(lPhi, gridSizePhi(), offsetPhi() ));
-    decoder()->set(cID, m_rhoIndex, positionToBin(lrho, m_grid_rho, m_offsetR/std::sin(lTheta)));
+
+    //Two ways for rho segmentation: 
+    if(m_rhoBins.size()<2)
+      decoder()->set(cID, m_rhoIndex, positionToBin(lrho, m_grid_rho, m_offsetR/std::sin(lTheta)));
+    else{
+      std::vector<double>::const_iterator bin = std::upper_bound(m_rhoBins.begin(),
+                                                                 m_rhoBins.end(),
+                                                                 lrho-m_offsetR/std::sin(lTheta));
+      int rhoID = bin - m_rhoBins.begin() - 1 ;
+      //int rhoID = Segmentation::positionToBin(lrho, m_rhoBins, m_offsetR/std::sin(lTheta));  //Note: a bug in dd4hep::Segmentation::positionToBin() function. 
+
+      //Add a protection for cell ID, if the position is out of bin range
+      //WARNING: may introduce bug. Better to well-define bin edges. 
+      if(rhoID<0) rhoID = 0;
+      if(rhoID>m_rhoBins.size()-2) rhoID = m_rhoBins.size()-2;
+      decoder()->set(cID, m_rhoIndex, rhoID);
+    }
+
     return cID;
   }
 
@@ -55,10 +77,14 @@ namespace DDSegmentation {
   double FCCSWModularRhoPhiTheta_k4geo::rho(const CellID cID) const {
     CellID rhoValue = decoder()->get(cID, m_rhoIndex);
     double m_theta = theta(cID);
+
     // dd4hep::Segmentation::binToPosition: bin * cellSize + offset;
-    return binToPosition(rhoValue, m_grid_rho, m_offsetR/std::sin(m_theta) );
+    if(m_rhoBins.size()<2)
+      return binToPosition(rhoValue, m_grid_rho, m_offsetR/std::sin(m_theta) );
+    else
+      return m_offsetR/std::sin(m_theta) + 0.5*(m_rhoBins[rhoValue] + m_rhoBins[rhoValue+1]);
+    
   }
-  
 
 
 } // namespace DDSegmentation
