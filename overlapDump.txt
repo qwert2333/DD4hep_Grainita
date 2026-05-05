@@ -1,0 +1,1409 @@
+PersistencyIO    INFO  +++ Set Streamer to dd4hep::OpaqueDataBlock
+XMLLoader        INFO  +++ Processing XML file: file:/eos/home-f/faguo/FCCSW/DD4hep_Grainita/Grainita_ECAL/compact/Grainita_ECAL_Barrel_v02.xml
+DD4hep           WARN  ++ STD conditions NOT defined by client. NTP defaults taken.
+VisAttr          INFO  +++ SensitiveVis Allocated a Color: r:66 g:B2 b:FF, this will not save to a ROOT file
+VisAttr          INFO  +++ WLSFiberVis Allocated a Color: r:FF g:4C b:33, this will not save to a ROOT file
+Detector         INFO  *********** Created World volume with size: 1000 1000 1000
+--> Grainita_ECAL_Barrel_v02::create_detector() start
+--> Going to create Grainita_ECAL_Barrel_v02, with ID: 10
+  -- Dimension: inner R 220, outer R 273.623, inner half Z 230
+     Z segmentation: 15, Phi segmentation: 12
+-- Consider a tilt angle in phi to avoid pointing cracks. Tilt angle (in deg): 0.5, in rad: 0.00872665
+Input vars: Rin 220, Rout 273.623, phi 0.261799, delta 0.00872665
+  Calculate the new boundary lines: 
+    in -y side: k = -0.212903, b = -12.1102
+    in +y side: k = 0.324553, b = -12.4529
+  Calculated +y direction shift: 2.50757
+  Calculated -y direction shift: 2.43855
+  halfZ out = 264.3 / tan(0.754453) 
+  Outer radius and halfZ considering this: 274.283, 281.186
+  halfZ out = 263.3 / tan(0.756719) = 278.853
+
+  Calculate the new boundary lines in Sector: 
+    in -y side: k = -0.212903, b = -12.1102
+    in +y side: k = 0.324553, b = -12.4529
+  Calculated +y direction shift: 2.50757
+  Calculated -y direction shift: 2.43855
+Module #0 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 48.853, width (max) = 39.4258
+  Theta range: 0.765445, 0.872825, tilt angle -0.00872665, -0.00872665, local tilt angle 0.713631, 0.820553
+  height: 29.6267, inner width 59.1617, 59.2734, outer width 65.4693, 68.8888
+  Inner surface vertices: 
+    [230, 59.2734], 
+    [230, -59.1617], 
+    [185.381, -59.1617], 
+    [185.381, 59.2734], 
+  Outer surface vertices: 
+    [264.216, 68.8888], 
+    [264.216, -65.4693], 
+    [212.994, -65.4693], 
+    [212.994, 68.8888], 
+Module #1 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 39.4258, width (max) = 31.7085
+  Theta range: 0.872825, 0.980205, tilt angle -0.00872665, -0.00872665, local tilt angle 0.820553, 0.927544
+  height: 32.4061, inner width 59.1617, 59.2734, outer width 66.0611, 69.7909
+  Inner surface vertices: 
+    [185.381, 59.2734], 
+    [185.381, -59.1617], 
+    [148.161, -59.1617], 
+    [148.161, 59.2734], 
+  Outer surface vertices: 
+    [215.585, 69.7909], 
+    [215.585, -66.0611], 
+    [172.453, -66.0611], 
+    [172.453, 69.7909], 
+Module #2 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 31.7085, width (max) = 25.1386
+  Theta range: 0.980205, 1.08759, tilt angle -0.00872665, -0.00872665, local tilt angle 0.927544, 1.03458
+  height: 34.8158, inner width 59.1617, 59.2734, outer width 66.5741, 70.573
+  Inner surface vertices: 
+    [148.161, 59.2734], 
+    [148.161, -59.1617], 
+    [115.958, -59.1617], 
+    [115.958, 59.2734], 
+  Outer surface vertices: 
+    [174.259, 70.573], 
+    [174.259, -66.5741], 
+    [136.649, -66.5741], 
+    [136.649, 70.573], 
+Module #3 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 25.1386, width (max) = 19.3557
+  Theta range: 1.08759, 1.19497, tilt angle -0.00872665, -0.00872665, local tilt angle 1.03458, 1.14166
+  height: 36.8276, inner width 59.1617, 59.2734, outer width 67.0024, 71.2259
+  Inner surface vertices: 
+    [115.958, 59.2734], 
+    [115.958, -59.1617], 
+    [87.2035, -59.1617], 
+    [87.2035, 59.2734], 
+  Outer surface vertices: 
+    [137.845, 71.2259], 
+    [137.845, -67.0024], 
+    [104.055, -67.0024], 
+    [104.055, 71.2259], 
+Module #4 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 19.3557, width (max) = 14.1139
+  Theta range: 1.19497, 1.30235, tilt angle -0.00872665, -0.00872665, local tilt angle 1.14166, 1.24875
+  height: 38.4179, inner width 59.1617, 59.2734, outer width 67.341, 71.742
+  Inner surface vertices: 
+    [87.2035, 59.2734], 
+    [87.2035, -59.1617], 
+    [60.795, -59.1617], 
+    [60.795, 59.2734], 
+  Outer surface vertices: 
+    [104.783, 71.742], 
+    [104.783, -67.341], 
+    [73.6136, -67.341], 
+    [73.6136, 71.742], 
+Module #5 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 14.1139, width (max) = 9.2346
+  Theta range: 1.30235, 1.40973, tilt angle -0.00872665, -0.00872665, local tilt angle 1.24875, 1.35586
+  height: 39.5681, inner width 59.1617, 59.2734, outer width 67.5859, 72.1153
+  Inner surface vertices: 
+    [60.795, 59.2734], 
+    [60.795, -59.1617], 
+    [35.9076, -59.1617], 
+    [35.9076, 59.2734], 
+  Outer surface vertices: 
+    [73.9974, 72.1153], 
+    [73.9974, -67.5859], 
+    [44.5458, -67.5859], 
+    [44.5458, 72.1153], 
+Module #6 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 9.2346, width (max) = 4.57878
+  Theta range: 1.40973, 1.51711, tilt angle -0.00872665, -0.00872665, local tilt angle 1.35586, 1.46297
+  height: 40.2648, inner width 59.1617, 59.2734, outer width 67.7342, 72.3415
+  Inner surface vertices: 
+    [35.9076, 59.2734], 
+    [35.9076, -59.1617], 
+    [11.8769, -59.1617], 
+    [11.8769, 59.2734], 
+  Outer surface vertices: 
+    [44.6979, 72.3415], 
+    [44.6979, -67.7342], 
+    [16.2354, -67.7342], 
+    [16.2354, 72.3415], 
+Module #7 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 4.57878, width (max) = 4.57878
+  Theta range: 1.51711, 1.62449, tilt angle -0.00872665, 0.00872665, local tilt angle 1.46297, -1.46297
+  height: 40.2648, inner width 59.1617, 59.2734, outer width 67.7342, 72.3415
+  Inner surface vertices: 
+    [11.8769, 59.2734], 
+    [11.8769, -59.1617], 
+    [-11.8769, -59.1617], 
+    [-11.8769, 59.2734], 
+  Outer surface vertices: 
+    [16.2354, 72.3415], 
+    [16.2354, -67.7342], 
+    [-16.2354, -67.7342], 
+    [-16.2354, 72.3415], 
+Module #8 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 4.57878, width (max) = 9.2346
+  Theta range: 1.62449, 1.73187, tilt angle 0.00872665, 0.00872665, local tilt angle -1.46297, -1.35586
+  height: 40.2648, inner width 59.1617, 59.2734, outer width 67.7342, 72.3415
+  Inner surface vertices: 
+    [-11.8769, 59.2734], 
+    [-11.8769, -59.1617], 
+    [-35.9076, -59.1617], 
+    [-35.9076, 59.2734], 
+  Outer surface vertices: 
+    [-16.2354, 72.3415], 
+    [-16.2354, -67.7342], 
+    [-44.6979, -67.7342], 
+    [-44.6979, 72.3415], 
+Module #9 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 9.2346, width (max) = 14.1139
+  Theta range: 1.73187, 1.83925, tilt angle 0.00872665, 0.00872665, local tilt angle -1.35586, -1.24875
+  height: 39.5681, inner width 59.1617, 59.2734, outer width 67.5859, 72.1153
+  Inner surface vertices: 
+    [-35.9076, 59.2734], 
+    [-35.9076, -59.1617], 
+    [-60.795, -59.1617], 
+    [-60.795, 59.2734], 
+  Outer surface vertices: 
+    [-44.5458, 72.1153], 
+    [-44.5458, -67.5859], 
+    [-73.9974, -67.5859], 
+    [-73.9974, 72.1153], 
+Module #10 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 14.1139, width (max) = 19.3557
+  Theta range: 1.83925, 1.94663, tilt angle 0.00872665, 0.00872665, local tilt angle -1.24875, -1.14166
+  height: 38.4179, inner width 59.1617, 59.2734, outer width 67.341, 71.742
+  Inner surface vertices: 
+    [-60.795, 59.2734], 
+    [-60.795, -59.1617], 
+    [-87.2035, -59.1617], 
+    [-87.2035, 59.2734], 
+  Outer surface vertices: 
+    [-73.6136, 71.742], 
+    [-73.6136, -67.341], 
+    [-104.783, -67.341], 
+    [-104.783, 71.742], 
+Module #11 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 19.3557, width (max) = 25.1386
+  Theta range: 1.94663, 2.05401, tilt angle 0.00872665, 0.00872665, local tilt angle -1.14166, -1.03458
+  height: 36.8276, inner width 59.1617, 59.2734, outer width 67.0024, 71.2259
+  Inner surface vertices: 
+    [-87.2035, 59.2734], 
+    [-87.2035, -59.1617], 
+    [-115.958, -59.1617], 
+    [-115.958, 59.2734], 
+  Outer surface vertices: 
+    [-104.055, 71.2259], 
+    [-104.055, -67.0024], 
+    [-137.845, -67.0024], 
+    [-137.845, 71.2259], 
+Module #12 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 25.1386, width (max) = 31.7085
+  Theta range: 2.05401, 2.16139, tilt angle 0.00872665, 0.00872665, local tilt angle -1.03458, -0.927544
+  height: 34.8158, inner width 59.1617, 59.2734, outer width 66.5741, 70.573
+  Inner surface vertices: 
+    [-115.958, 59.2734], 
+    [-115.958, -59.1617], 
+    [-148.161, -59.1617], 
+    [-148.161, 59.2734], 
+  Outer surface vertices: 
+    [-136.649, 70.573], 
+    [-136.649, -66.5741], 
+    [-174.259, -66.5741], 
+    [-174.259, 70.573], 
+Module #13 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 31.7085, width (max) = 39.4258
+  Theta range: 2.16139, 2.26877, tilt angle 0.00872665, 0.00872665, local tilt angle -0.927544, -0.820553
+  height: 32.4061, inner width 59.1617, 59.2734, outer width 66.0611, 69.7909
+  Inner surface vertices: 
+    [-148.161, 59.2734], 
+    [-148.161, -59.1617], 
+    [-185.381, -59.1617], 
+    [-185.381, 59.2734], 
+  Outer surface vertices: 
+    [-172.453, 69.7909], 
+    [-172.453, -66.0611], 
+    [-215.585, -66.0611], 
+    [-215.585, 69.7909], 
+Module #14 Geometry parameters: 
+Sector outerR - innerR = 42.3, width (min) = 39.4258, width (max) = 48.853
+  Theta range: 2.26877, 2.37615, tilt angle 0.00872665, 0.00872665, local tilt angle -0.820553, -0.713631
+  height: 29.6267, inner width 59.1617, 59.2734, outer width 65.4693, 68.8888
+  Inner surface vertices: 
+    [-185.381, 59.2734], 
+    [-185.381, -59.1617], 
+    [-230, -59.1617], 
+    [-230, 59.2734], 
+  Outer surface vertices: 
+    [-212.994, 68.8888], 
+    [-212.994, -65.4693], 
+    [-264.216, -65.4693], 
+    [-264.216, 68.8888], 
+--> Grainita_ECAL_Barrel_v02::create_detector() end
+Compact          INFO  ++ Converted subdetector:Grainita_ECAL_Barrel_v02 of type Grainita_ECAL_Barrel_v02 [calorimeter]
+Detector         INFO  +++ Patching names of anonymous shapes....
+DDG4             INFO +++ Imported 20 global values to namespace:DDG4
+Geant4Kernel           OutputLevel:  2
+Geant4Kernel           UI:           UI
+Geant4Kernel           NumEvents:    10
+DDG4             INFO +++  List of sensitive detectors:
+Geant4Kernel           NumThreads:   0
+DDG4             INFO +++  Grainita_ECAL_Barrel_v02         type:calorimeter   --> Sensitive type: Geant4ScintillatorCalorimeterAction  
+Geant4UI         INFO  +++ UI> Install Geant4 control directory:/ddg4/UI/
+Geant4Kernel     INFO  ++ Registered global action UI of type dd4hep::sim::Geant4UIManager
+Geant4UI         INFO  +++ MagFieldTrackingSetup> Install Geant4 control directory:/ddg4/MagFieldTrackingSetup/
+Geant4UI         INFO  +++ DetectorConstructionAction> Install Geant4 control directory:/ddg4/DetectorConstructionAction/
+Geant4UI         INFO  +++ ConstructSD> Install Geant4 control directory:/ddg4/ConstructSD/
+Geant4Kernel     INFO  ++ Registered global action RunInit of type dd4hep::sim::Test::Geant4TestRunAction
+DDSim.Helper.Random INFO Choosing random seed for you: 904724796
+DDSim.Helper.OutputConfig INFO ++++ Setting up EDM4hep ROOT::TTree Output ++++
+Geant4UI         INFO  +++ RunAction> Install Geant4 control directory:/ddg4/RunAction/
+EDM4hepOutput    INFO  Writer is now instantiated ...
+Geant4UI         INFO  +++ EDM4hepOutput> Install Geant4 control directory:/ddg4/EDM4hepOutput/
+Geant4UI         INFO  +++ EventAction> Install Geant4 control directory:/ddg4/EventAction/
+Geant4UI         INFO  +++ TrackingAction> Install Geant4 control directory:/ddg4/TrackingAction/
+Geant4UI         INFO  +++ SteppingAction> Install Geant4 control directory:/ddg4/SteppingAction/
+Geant4UI         INFO  +++ GeneratorAction> Install Geant4 control directory:/ddg4/GeneratorAction/
+DDSim.Helper.Filter INFO ReqFilt {'edep1kev', 'edep0'}
+DDSim            INFO getDetectorLists - found active detector Grainita_ECAL_Barrel_v02 type: calorimeter
+DDSim            INFO getDetectorLists - Identified Grainita_ECAL_Barrel_v02 as a calorimeter
+DDSim            INFO Setting up SD for Grainita_ECAL_Barrel_v02 with Geant4ScintillatorCalorimeterAction
+Geant4UI         INFO  +++ ParticleHandler> Install Geant4 control directory:/ddg4/ParticleHandler/
+Geant4UI         INFO  +++ Grainita_ECAL_Barrel_v02> Install Geant4 control directory:/ddg4/Grainita_ECAL_Barrel_v02/
+DDSim.Helper.Filter INFO Adding default filter 'edep0' to sensitive detector for 'Grainita_ECAL_Barrel_v02' 
+Geant4UI         INFO  +++ Grainita_ECAL_Barrel_v02Handler> Install Geant4 control directory:/ddg4/Grainita_ECAL_Barrel_v02Handler/
+Geant4UI         INFO  +++ PhysicsList> Install Geant4 control directory:/ddg4/PhysicsList/
+PhysicsList            +++ Dump of physics list component(s)
+PhysicsList            +++ Extension name       FTFP_BERT
+PhysicsList            +++ Transportation flag: 0
+PhysicsList            +++ Program decays:      0
+PhysicsList            +++ RangeCut:            0.700000
+PhysicsList            +++ Verbosity:           1
+Geant4UI         INFO  +++ GlobalRangeCut> Install Geant4 control directory:/ddg4/GlobalRangeCut/
+ G4ChordFinder: stepperDriverId: 2
+FieldSetup       INFO  Geant4 magnetic field tracking configured.
+FieldSetup       INFO  G4MagIntegratorStepper:ClassicalRK4 G4Mag_EqRhs:Mag_UsualEqRhs
+FieldSetup       INFO  Epsilon:[min:0.000050 max:0.001000]
+FieldSetup       INFO  Delta:[chord:0.250000 1-step:0.010000 intersect:0.001000] LargestStep 10000.000000 mm
+
+**************************************************************
+ Geant4 version Name: geant4-11-04 [MT]   (5-December-2025)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+Geant4UI         INFO  +++ Geant4RunManager> Install Geant4 control directory:/ddg4/Geant4RunManager/
+Geant4RunManager WARN  +++ Configured run manager of type: G4RunManager.
+Geant4Kernel     WARN  +++ Multi-threaded mode requested, but not supported by this compilation of Geant4.
+Geant4Kernel     WARN  +++ Falling back to single threaded mode.
+Geant4Exec       WARN  +++ Only 1 subdetectors present. You sure you loaded the geometry properly?
+G4PhysListFactory::GetReferencePhysList <FTFP_BERT>
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+
+Myphysics        INFO  +++ Registered Geant4 physics constructor G4StepLimiterPhysics to modular physics list id:0
+UserInitialization INFO  +++ Executing Geant4UserActionInitialization::Build. Context:0xef12fe0 Kernel:0xeea3da0 [-1]
+SignalHandler    INFO  ++ Re-apply signal handlers
+Geant4Converter  INFO  +++  Successfully converted geometry to Geant4. [  0.002 seconds]
+Geant4VolumeManager       +++ Populating Geant4 volume manager.
+Geant4VolumeManager       +++ Geant4 volume manager populated with 180 sensitive path entries.
+Geant4UI         INFO  +++ ConstructGeo> Install Geant4 control directory:/ddg4/ConstructGeo/
+
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+GlobalRangeCut   INFO  +++ Set PhysicsList RangeCut to 0.700000 mm
+UI               INFO  ++ Executing initialization command: /geometry/test/run
+Running geometry overlaps check...
+Checking overlaps for volume EcalBarrel_0:0 (G4Tubs) ... OK! 
+Checking overlaps for volume InnerCarbonFrame_0:0 (G4Polyhedra) ... OK! 
+Checking overlaps for volume outerCarbonFrame_1:1 (G4Polyhedra) ... OK! 
+Checking overlaps for volume sector_vol_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume sector_vol_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol0_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol1_1:1 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol1_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol2_2:2 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol2_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol3_3:3 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol3_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol4_4:4 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol4_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol5_5:5 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol5_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol6_6:6 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol6_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol7_7:7 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol7_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol8_8:8 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol8_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol9_9:9 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol9_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol10_10:10 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol10_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol11_11:11 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol11_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol12_12:12 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol12_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol13_13:13 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol13_0:0 (G4GenericTrap) ... OK! 
+Checking overlaps for volume module_vol14_14:14 (G4GenericTrap) ... OK! 
+Checking overlaps for volume moduleCrystal_vol14_0:0 (G4GenericTrap) ... OK! 
+Geometry overlaps check completed !
+UI               INFO  ++ Start run with 0 events.
+=======================================================================
+======                 Electromagnetic Physics Parameters      ========
+=======================================================================
+LPM effect enabled                                 1
+Enable creation and use of sampling tables         0
+Apply cuts on all EM processes                     0
+Use combined TransportationWithMsc                 Disabled
+Use general process                                1
+Enable linear polarisation for gamma               0
+Enable photoeffect sampling below K-shell          1
+Enable sampling of quantum entanglement            0
+X-section factor for integral approach             0.8
+Min kinetic energy for tables                      100 eV 
+Max kinetic energy for tables                      100 TeV
+Number of bins per decade of a table               7
+Verbose level                                      1
+Verbose level for worker thread                    0
+Bremsstrahlung energy threshold above which 
+  primary e+- is added to the list of secondary    100 TeV
+Bremsstrahlung energy threshold above which primary
+  muon/hadron is added to the list of secondary    100 TeV
+Positron annihilation at rest model                SimplePositronium
+Enable 3 gamma annihilation on fly                 0
+Lowest triplet kinetic energy                      1 MeV
+Enable sampling of gamma linear polarisation       0
+5D gamma conversion model type                     0
+5D gamma conversion model on isolated ion          0
+Use RiGe 5D e+e- pair production model by muons    0
+Livermore data directory                           epics_2017
+=======================================================================
+======                 Ionisation Parameters                   ========
+=======================================================================
+Step function for e+-                              (0.2, 1 mm)
+Step function for muons/hadrons                    (0.2, 0.1 mm)
+Step function for light ions                       (0.2, 0.1 mm)
+Step function for general ions                     (0.2, 0.1 mm)
+Lowest e+e- kinetic energy                         1 keV
+Lowest muon/hadron kinetic energy                  1 keV
+Use ICRU90 data                                    0
+Fluctuations of dE/dx are enabled                  1
+Type of fluctuation model for leptons and hadrons  Urban
+Use built-in Birks saturation                      0
+Build CSDA range enabled                           0
+Use cut as a final range enabled                   0
+Enable angular generator interface                 0
+Max kinetic energy for CSDA tables                 1 GeV
+Max kinetic energy for NIEL computation            0 eV 
+Linear loss limit                                  0.01
+Read data from file for e+e- pair production by mu 0
+=======================================================================
+======                 Multiple Scattering Parameters          ========
+=======================================================================
+Type of msc step limit algorithm for e+-           1
+Type of msc step limit algorithm for muons/hadrons 0
+Msc lateral displacement for e+- enabled           1
+Msc lateral displacement for muons and hadrons     0
+Urban msc model lateral displacement alg96         1
+Range factor for msc step limit for e+-            0.04
+Range factor for msc step limit for muons/hadrons  0.2
+Geometry factor for msc step limitation of e+-     2.5
+Safety factor for msc step limit for e+-           0.6
+Skin parameter for msc step limitation of e+-      1
+Lambda limit for msc step limit for e+-            1 mm
+Use Mott correction for e- scattering              0
+Factor used for dynamic computation of angular 
+  limit between single and multiple scattering     1
+Fixed angular limit between single 
+  and multiple scattering                          3.1416 rad
+Upper energy limit for e+- multiple scattering     100 MeV
+Type of electron single scattering model           0
+Type of nuclear form-factor                        1
+Screening factor                                   1
+=======================================================================
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 150 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 150 keV to 100 TeV in 62 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e- XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+ XStype:2 SubType=5 AtRestModel:Simple BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001, from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for GenericIon  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for alpha  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for anti_proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for anti_proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001, from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for anti_proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001, from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001, from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001, from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001, from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001, from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001, from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+-----------------------------------------------------------------------
+                           Hadronic Processes for neutron
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+  Process: nKiller
+-----------------------------------------------------------------------
+                           Hadronic Processes for B-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for D-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for GenericIon
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-------------------------------------------------------------------------
+                           Hadronic Processes for anti_hypertriton
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_neutron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_proton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e-
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for gamma
+  Process: photonNuclear
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            GammaNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu-
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+  Process: muMinusCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi-
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for proton
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for sigma-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+=======================================================================
+======       Geant4 Native Pre-compound Model Parameters       ========
+=======================================================================
+Type of pre-compound model                          0
+Type of pre-compound inverse x-section              1
+Pre-compound model active                           1
+Pre-compound excitation low energy                  0.1 MeV 
+Pre-compound excitation high energy                 15 MeV 
+Angular generator for pre-compound model            1
+Use NeverGoBack option for pre-compound model       0
+Use SoftCutOff option for pre-compound model        0
+Use CEM transitions for pre-compound model          1
+Use GNASH transitions for pre-compound model        0
+Use HETC submodel for pre-compound model            0
+=======================================================================
+======       Nuclear De-excitation Module Parameters           ========
+=======================================================================
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Type of Fermi BreakUp model                         ModelVI
+Min excitation energy                               0.01 keV 
+Min energy per nucleon for multifragmentation       2e+05 MeV
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres                  1 ns 
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   1
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
+
+DDSim            INFO Total Time:   5.22 s (User), 1.19 s (System)
+Geant4Kernel     INFO  ++ Terminate Geant4 and delete associated actions.
