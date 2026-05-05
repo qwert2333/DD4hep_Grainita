@@ -39,8 +39,8 @@ static Ref_t create_detector(Detector &description, xml_h e,
   Material  air(description.material("Air"));
   Material  MatCarbonfiber(description.material("CarbonFiber"));
   Material  MatCrystal(description.material( x_det.attr<std::string>(_U(material)) ));
-  Material  MatWLSfiber(description.material("WLSFiber"));
-  Material  MatPMMAcladding(description.material("PMMA"));
+  //Material  MatWLSfiber(description.material("WLSFiber"));
+  //Material  MatPMMAcladding(description.material("PMMA"));
 
 
   // Detector global size
@@ -56,9 +56,9 @@ static Ref_t create_detector(Detector &description, xml_h e,
   auto module_tilt = description.constant<double>("ModuleTiltAngle"); //Unit in degree
   double module_tilt_rad = module_tilt*M_PI/180.;
 
-  auto fiber_r = description.constant<double>("FiberRadius");
-  auto cladding_thick = description.constant<double>("CladdingThickness");
-  auto fiber_pitch = description.constant<double>("FiberPitchSize"); 
+  //auto fiber_r = description.constant<double>("FiberRadius");
+  //auto cladding_thick = description.constant<double>("CladdingThickness");
+  //auto fiber_pitch = description.constant<double>("FiberPitchSize"); 
 
 
   double dphi_sec = 2*M_PI/nSec_phi;
