@@ -4,8 +4,8 @@
 // FCCSW
 #include "detectorSegmentations/FCCSWGridPhiTheta_k4geo.h"
 
-/** FCCSWModularRhoPhiTheta_k4geo Detector/detectorSegmentations/detectorSegmentations/FCCSWModularRhoPhiTheta_k4geo.h
- * FCCSWModularRhoPhiTheta_k4geo.h
+/** FCCSWGridRhoPhiTheta_k4geo Detector/detectorSegmentations/detectorSegmentations/FCCSWGridRhoPhiTheta_k4geo.h
+ * FCCSWGridRhoPhiTheta_k4geo.h
  *
  *  Segmentation in rho, theta and phi.
  *  Based on FCCSWGridPhiTheta_k4geo, addition of Rho segmentation
@@ -14,15 +14,15 @@
 
 namespace dd4hep {
 namespace DDSegmentation {
-  class FCCSWModularRhoPhiTheta_k4geo : public FCCSWGridPhiTheta_k4geo {
+  class FCCSWGridRhoPhiTheta_k4geo : public FCCSWGridPhiTheta_k4geo {
   public:
     /// default constructor using an arbitrary type
-    FCCSWModularRhoPhiTheta_k4geo(const std::string& aCellEncoding);
+    FCCSWGridRhoPhiTheta_k4geo(const std::string& aCellEncoding);
     /// Default constructor used by derived classes passing an existing decoder
-    FCCSWModularRhoPhiTheta_k4geo(const BitFieldCoder* decoder);
+    FCCSWGridRhoPhiTheta_k4geo(const BitFieldCoder* decoder);
 
     /// destructor
-    virtual ~FCCSWModularRhoPhiTheta_k4geo() = default;
+    virtual ~FCCSWGridRhoPhiTheta_k4geo() = default;
 
     /**  Determine the global position based on the cell ID.
      *   @warning This segmentation has no knowledge of radius, so radius = 1 is taken into calculations.
@@ -39,6 +39,21 @@ namespace DDSegmentation {
     virtual CellID cellID(const Vector3D& aLocalPosition, const Vector3D& aGlobalPosition,
                           const VolumeID& aVolumeID) const override;
  
+
+    /**  Find neighbours of the cell.
+     *   Definition of neighbours is explained on slide 9:
+     * https://indico.cern.ch/event/1475808/contributions/6219554/attachments/2966253/5218774/FCC_FullSim_HCal_slides.pdf
+     *   @param[in] cID ID of a cell.
+     *   @param[in] aDiagonal if true, will include neighbours from diagonal positions in the next and previous layers.
+     *   return vector of neighbour cellIDs.
+     */
+    //std::vector<uint64_t> neighbours(const CellID cID, bool aDiagonal) const;
+
+    /**  Find neighbours of the cell.
+     *   Implement the signature from the Segmentation base class.
+     */
+    //virtual void neighbours(const CellID& cellID, std::set<CellID>& neighbours) const override;
+
   private:
     /// Get rho from cellID
     double rho(const CellID cID) const;
