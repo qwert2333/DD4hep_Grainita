@@ -46,3 +46,4 @@ install*
 
 # data
 *.root
+run/

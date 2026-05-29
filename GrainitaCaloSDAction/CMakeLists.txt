@@ -5,13 +5,14 @@ file(GLOB sources
 )
 
 file(GLOB headers
-  ${PROJECT_SOURCE_DIR}/include/*.hh
+  ${PROJECT_SOURCE_DIR}/src/*.h
 )
 
 add_library(GrainitaCaloSDAction SHARED ${sources} ${headers})
 
 target_include_directories(GrainitaCaloSDAction PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../detectorSegmentations/include>
   $<INSTALL_INTERFACE:include>
 )
 
@@ -21,6 +22,7 @@ target_link_libraries(
   GrainitaCaloSDAction
   DD4hep::DDCore
   DD4hep::DDG4
+  detectorSegmentations
 )
 
 dd4hep_generate_rootmap(GrainitaCaloSDAction)

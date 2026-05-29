@@ -31,5 +31,5 @@ dd4hep_add_plugin(${PROJECT_NAME} SOURCES ${SOURCES} USES
 #  ${PROJECT_SOURCE_DIR}/simplecalo2/include
 #)
 
-add_subdirectory(GrainitaCaloSDAction)
 add_subdirectory(detectorSegmentations)
+add_subdirectory(GrainitaCaloSDAction)

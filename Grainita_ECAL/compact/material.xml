@@ -59,6 +59,15 @@
       <composite n="8" ref="H" />
     </material>
 
+    <!--Outer cladding material-->
+    <material name="FP" state="solid">
+      <D value="1.43" unit="g/cm3"/>
+      <composite n="6" ref="C" />
+      <composite n="7" ref="H" />
+      <composite n="3" ref="F" />
+      <composite n="2" ref="O" />
+    </material>
+
     <!--Note: following material are defined by averaging grains, medium and fibers in 7mm pitch size 
       Fiber structure: WLS fiber r = 0.5 mm, with 0.02 mm thick PMMA cladding -->
 

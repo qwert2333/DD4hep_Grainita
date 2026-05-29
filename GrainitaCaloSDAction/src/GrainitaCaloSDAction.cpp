@@ -21,7 +21,8 @@
  * limitations under the License.
  */
 
-//#include "GrainitaCaloSDAction.hh"
+#include "GrainitaCaloSDAction.h"
+#include "detectorSegmentations/FCCSWModularGridRhoPhiTheta_k4geo.h"
 #include "DD4hep/Segmentations.h"
 #include "DDG4/Factories.h"
 #include "DDG4/Geant4GeneratorAction.h"
@@ -37,40 +38,22 @@
 
 namespace dd4hep {
 namespace sim {
-  class GrainitaCaloSDData {
-    // Constructor and destructor
-    //
-  public:
-    GrainitaCaloSDData() = default;
-    ~GrainitaCaloSDData() = default;
 
-  public:
-    Geant4Sensitive* sensitive{};
+  template <>
+  Geant4SensitiveAction<GrainitaCaloSDData>::Geant4SensitiveAction(Geant4Context* ctxt, const std::string& nam,
+                                                                    DetElement det, Detector& desc)
+      : Geant4Sensitive(ctxt, nam, det, desc), m_collectionName(), m_collectionID(0) {
+    declareProperty("ReadoutName", m_readoutName);
+    declareProperty("CollectionName", m_collectionName);
+    declareProperty("responseInnerCell", m_userData.responseInnerCell);
+    declareProperty("responseMapHalfWidth", m_userData.responseMapHalfWidth);
+    declareProperty("responseMapBins", m_userData.responseMapBins);
+    declareProperty("responseIntercellNeighbor", m_userData.responseIntercellNeighbor);
+    declareProperty("responseIntercellDiag", m_userData.responseIntercellDiag);
+    InstanceCount::increment(this);
 
-  };
-
-  // Inner cell response map
-  //double response_innercell[7][7] = { 1.92843, 3.07318, -6.09594, -7.20984, -4.89420, 2.93879, 3.34451,
-  //  0.78368, 2.67172, -6.05233, -5.98395, -0.56035, 7.52742, 3.75024,
-  //  2.64146, 1.26341, -4.37351, -7.44680, 0.64540, 1.20680, 4.89643,
-  //  1.87612, -2.61481, -7.82113, -5.65042, -2.84322, -3.10660, -0.05807,
-  //  1.69076, -1.83813, -5.50838, -5.34737, -1.53522, 1.40096, 3.20557,
-  //  7.67758, 2.89708, -4.82156, -0.85286, 2.44410, 2.02479, 8.05585,
-  //  5.23757, 2.79756, 0.96678, -3.64029, 0.22140, 4.70631, 6.38108,
-  //};
-  double response_innercell[7][7] = {0.};
-
-  //Inter-cell response: ver.0
-  //Parameterized: 20% for neighbor (phi id +- 1 OR theta id +- 1) cell,
-  //10% for diagonal (phi id +- 1 AND theta id +- 1) cell.
-  double response_intercell_neighbor = 0.2;
-  double response_intercell_diag = 0.1;  
-
-} // namespace sim
-} // namespace dd4hep
-
-namespace dd4hep {
-namespace sim {
+    m_hitCreationMode = HitCreationFlags::DETAILED_MODE;
+  }
 
   // Function template specialization of Geant4SensitiveAction class.
   // Define actions
@@ -133,9 +116,14 @@ namespace sim {
     G4ThreeVector HitCellPos(hitpos_dd4hep.x()*dd4hep::centimeter/dd4hep::millimeter, hitpos_dd4hep.y()*dd4hep::centimeter/dd4hep::millimeter, hitpos_dd4hep.z()*dd4hep::centimeter/dd4hep::millimeter );
 
 
-    //Get step local position in cell frame for the response map
-    // Define cell frame: IP-to-cell as Z axis. 
+    //Get step local position in cell frame for the response map.
+    // Prefer the modular tilted virtual fiber direction when this readout uses it.
     G4ThreeVector ez = HitCellPos.unit();
+    auto modularSeg = dynamic_cast<const dd4hep::DDSegmentation::FCCSWModularGridRhoPhiTheta_k4geo*>(m_segmentation->segmentation);
+    if (modularSeg && modularSeg->tiltedFiberEnabled()) {
+      auto fiberDir = modularSeg->fiberDirection(cellID);
+      ez = G4ThreeVector(fiberDir.X, fiberDir.Y, fiberDir.Z).unit();
+    }
     G4ThreeVector ref(0,0,1);
     if (std::abs(ez.dot(ref)) > 0.99) ref = G4ThreeVector(1,0,0);
 
@@ -144,14 +132,18 @@ namespace sim {
     G4ThreeVector rel = global - HitCellPos;
     G4ThreeVector local(rel.dot(ex), rel.dot(ey), rel.dot(ez));
 
-    //TODO: hard-coded the boundary as +-4. mm
-    int step_idx = floor((local.x()+4.)/8*7);
-    int step_idy = floor((local.y()+4.)/8*7);
+    const int responseBins = m_userData.responseMapBins > 0 ? m_userData.responseMapBins : 7;
+    const double responseHalfWidth = m_userData.responseMapHalfWidth > 0. ? m_userData.responseMapHalfWidth : 4.;
+    const double responseWidth = 2. * responseHalfWidth;
+    int step_idx = floor((local.x() + responseHalfWidth) / responseWidth * responseBins);
+    int step_idy = floor((local.y() + responseHalfWidth) / responseWidth * responseBins);
     if(step_idx<0) step_idx = 0;
-    if(step_idx>6) step_idx = 6;
+    if(step_idx>=responseBins) step_idx = responseBins - 1;
     if(step_idy<0) step_idy = 0;
-    if(step_idy>6) step_idy = 6;
-    double step_E = (1 + response_innercell[step_idx][step_idy]/100.) * aStep->GetTotalEnergyDeposit();
+    if(step_idy>=responseBins) step_idy = responseBins - 1;
+    const int responseIndex = step_idx * responseBins + step_idy;
+    const double response = responseIndex < static_cast<int>(m_userData.responseInnerCell.size()) ? m_userData.responseInnerCell[responseIndex] : 0.;
+    double step_E = (1 + response/100.) * aStep->GetTotalEnergyDeposit();
 
 
 #ifdef DEBUG
@@ -215,12 +207,6 @@ namespace sim {
 } // namespace sim
 } // namespace dd4hep
 
-//--- Factory declaration
-namespace dd4hep {
-namespace sim {
-  typedef Geant4SensitiveAction<GrainitaCaloSDData> GrainitaCaloSDAction;
-}
-} // namespace dd4hep
 DECLARE_GEANT4SENSITIVE(GrainitaCaloSDAction)
 
 //**************************************************************************

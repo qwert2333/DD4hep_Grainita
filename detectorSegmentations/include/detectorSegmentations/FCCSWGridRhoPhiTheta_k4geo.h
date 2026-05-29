@@ -54,9 +54,11 @@ namespace DDSegmentation {
      */
     //virtual void neighbours(const CellID& cellID, std::set<CellID>& neighbours) const override;
 
-  private:
+  protected:
     /// Get rho from cellID
     double rho(const CellID cID) const;
+
+  private:
     /// the grid size in rho
     double m_grid_rho;
     std::vector<double> m_rhoBins;

@@ -199,9 +199,10 @@ std::cout<<"  halfZ out = "<<outerR_sector*cos(dphi_sec/2.)<<" / tan("<<atan(inn
     std::cout<<", width (max) = "<<fabs(outerR_sector*cos(dphi_sec/2.)/tan(theta_max_module+tilt_max) -
                                     innerR_sector/tan(theta_max_module))<<std::endl;
 
-    // Module height: keeping the total length = crystal thickness. 
-    // so h = thick*sin(theta)
+    // Module height: keeping the total length = crystal thickness, so h = thick*sin(theta)
+    // Exception in the most central module: h = thick. 
     double height_module = (theta_max_module<M_PI/2.) ? crystal_thick*fabs(sin(tilt_max_local)) : crystal_thick*fabs(sin(tilt_min_local));
+    if( (theta_max_module-M_PI/2.)*(theta_min_module-M_PI/2.)<0 ) height_module = crystal_thick;
 
     //Module width: 
     double outer_width_module_neg = fabs(tmp_slope1*(innerR_sector+height_module) + tmp_intercept1);
