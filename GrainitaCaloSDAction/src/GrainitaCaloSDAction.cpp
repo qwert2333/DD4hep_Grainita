@@ -23,6 +23,7 @@
 
 #include "GrainitaCaloSDAction.h"
 #include "detectorSegmentations/FCCSWModularGridRhoPhiTheta_k4geo.h"
+#include "detectorSegmentations/FCCSWGridPhiTheta_k4geo.h"
 #include "DD4hep/Segmentations.h"
 #include "DDG4/Factories.h"
 #include "DDG4/Geant4GeneratorAction.h"
@@ -31,10 +32,13 @@
 
 #include "G4ThreeVector.hh"
 #include "G4TouchableHandle.hh"
+#include <algorithm>
 #include <cmath>
+#include <numeric>
+#include <vector>
 
 
-//#define DEBUG
+// #define DEBUG
 
 namespace dd4hep {
 namespace sim {
@@ -45,11 +49,16 @@ namespace sim {
       : Geant4Sensitive(ctxt, nam, det, desc), m_collectionName(), m_collectionID(0) {
     declareProperty("ReadoutName", m_readoutName);
     declareProperty("CollectionName", m_collectionName);
-    declareProperty("responseInnerCell", m_userData.responseInnerCell);
-    declareProperty("responseMapHalfWidth", m_userData.responseMapHalfWidth);
-    declareProperty("responseMapBins", m_userData.responseMapBins);
-    declareProperty("responseIntercellNeighbor", m_userData.responseIntercellNeighbor);
-    declareProperty("responseIntercellDiag", m_userData.responseIntercellDiag);
+    declareProperty("responseFuncSlope", m_userData.slope);
+    declareProperty("responseFuncIntersect", m_userData.intersect);
+    declareProperty("responseFuncX0", m_userData.x0);
+    declareProperty("responseFuncAttLength", m_userData.AttLength);
+    declareProperty("responseFuncNorm", m_userData.norm);
+    declareProperty("neighborCellSize", m_userData.neighborCellSize);
+    declareProperty("fiberAttenuationLength", m_userData.fiberAttenuationLength);
+    declareProperty("outerRadius", m_userData.outerRadius);
+
+
     InstanceCount::increment(this);
 
     m_hitCreationMode = HitCreationFlags::DETAILED_MODE;
@@ -115,35 +124,76 @@ namespace sim {
     auto hitpos_dd4hep = m_segmentation->position(cellID); // in cm
     G4ThreeVector HitCellPos(hitpos_dd4hep.x()*dd4hep::centimeter/dd4hep::millimeter, hitpos_dd4hep.y()*dd4hep::centimeter/dd4hep::millimeter, hitpos_dd4hep.z()*dd4hep::centimeter/dd4hep::millimeter );
 
-
-    //Get step local position in cell frame for the response map.
-    // Prefer the modular tilted virtual fiber direction when this readout uses it.
-    G4ThreeVector ez = HitCellPos.unit();
     auto modularSeg = dynamic_cast<const dd4hep::DDSegmentation::FCCSWModularGridRhoPhiTheta_k4geo*>(m_segmentation->segmentation);
-    if (modularSeg && modularSeg->tiltedFiberEnabled()) {
-      auto fiberDir = modularSeg->fiberDirection(cellID);
-      ez = G4ThreeVector(fiberDir.X, fiberDir.Y, fiberDir.Z).unit();
+    auto phiThetaSeg = dynamic_cast<const dd4hep::DDSegmentation::FCCSWGridPhiTheta_k4geo*>(m_segmentation->segmentation);
+    const int phiIndex = decoder->index("phi");
+    const int thetaIndex = decoder->index("theta");
+    const int phiBins = phiThetaSeg ? phiThetaSeg->phiBins() : 0;
+    const int currentPhiID = static_cast<int>(decoder->get(cellID, phiIndex));
+    const int currentThetaID = static_cast<int>(decoder->get(cellID, thetaIndex));
+    const int neighborSize = std::max(1, m_userData.neighborCellSize);
+    const int neighborRadius = neighborSize / 2;
+
+    std::vector<CellID> cellIDvec;
+    std::vector<G4ThreeVector> cellPosVec;
+    std::vector<G4double> responseVec;
+
+    auto dd4hepPositionToG4 = [](const dd4hep::DDSegmentation::Vector3D& pos) {
+      return G4ThreeVector(pos.X * dd4hep::centimeter / dd4hep::millimeter,
+                           pos.Y * dd4hep::centimeter / dd4hep::millimeter,
+                           pos.Z * dd4hep::centimeter / dd4hep::millimeter);
+    };
+
+    auto addCell = [&](CellID id) {
+      auto pos = m_segmentation->position(id);
+      cellIDvec.push_back(id);
+      cellPosVec.push_back(dd4hepPositionToG4(pos));
+    };
+
+    addCell(cellID);
+    for (int dPhi = -neighborRadius; dPhi <= neighborRadius; ++dPhi) {
+      for (int dTheta = -neighborRadius; dTheta <= neighborRadius; ++dTheta) {
+        if (dPhi == 0 && dTheta == 0) {
+          continue;
+        }
+
+        int neighborPhiID = currentPhiID + dPhi;
+        if (phiBins > 0) {
+          while (neighborPhiID >= phiBins) {
+            neighborPhiID -= phiBins;
+          }
+          while (neighborPhiID < 0) {
+            neighborPhiID += phiBins;
+          }
+        } else {
+          std::cout << "Error: phiBins is not well defined: " << phiBins << ". Cannot apply periodic boundary conditions." << std::endl;
+          continue;
+        }
+
+        const int neighborThetaID = currentThetaID + dTheta;
+
+        CellID neighborCellID = cellID;
+        decoder->set(neighborCellID, phiIndex, neighborPhiID);
+        decoder->set(neighborCellID, thetaIndex, neighborThetaID);
+        addCell(neighborCellID);
+      }
     }
-    G4ThreeVector ref(0,0,1);
-    if (std::abs(ez.dot(ref)) > 0.99) ref = G4ThreeVector(1,0,0);
 
-    G4ThreeVector ex = (ref.cross(ez)).unit();
-    G4ThreeVector ey = (ez.cross(ex)).unit();    
-    G4ThreeVector rel = global - HitCellPos;
-    G4ThreeVector local(rel.dot(ex), rel.dot(ey), rel.dot(ez));
+    auto transverseDistance = [&](CellID id, const G4ThreeVector& cellPos) {
+      G4ThreeVector axis = cellPos.unit();
+      if (modularSeg) {
+        auto fiberDir = modularSeg->fiberDirection(id);
+        axis = G4ThreeVector(fiberDir.X, fiberDir.Y, fiberDir.Z).unit();
+      }
+      G4ThreeVector rel = global - cellPos;
+      G4double transverse2 = rel.mag2() - rel.dot(axis) * rel.dot(axis);
+      return std::sqrt(std::max(0., transverse2));
+    };
 
-    const int responseBins = m_userData.responseMapBins > 0 ? m_userData.responseMapBins : 7;
-    const double responseHalfWidth = m_userData.responseMapHalfWidth > 0. ? m_userData.responseMapHalfWidth : 4.;
-    const double responseWidth = 2. * responseHalfWidth;
-    int step_idx = floor((local.x() + responseHalfWidth) / responseWidth * responseBins);
-    int step_idy = floor((local.y() + responseHalfWidth) / responseWidth * responseBins);
-    if(step_idx<0) step_idx = 0;
-    if(step_idx>=responseBins) step_idx = responseBins - 1;
-    if(step_idy<0) step_idy = 0;
-    if(step_idy>=responseBins) step_idy = responseBins - 1;
-    const int responseIndex = step_idx * responseBins + step_idy;
-    const double response = responseIndex < static_cast<int>(m_userData.responseInnerCell.size()) ? m_userData.responseInnerCell[responseIndex] : 0.;
-    double step_E = (1 + response/100.) * aStep->GetTotalEnergyDeposit();
+    responseVec.reserve(cellIDvec.size());
+    for (std::size_t i = 0; i < cellIDvec.size(); ++i) {
+      responseVec.push_back(m_userData.lightResponse(transverseDistance(cellIDvec[i], cellPosVec[i])));
+    }
 
 
 #ifdef DEBUG
@@ -152,53 +202,55 @@ namespace sim {
     auto rhoID = m_segmentation->decoder()->get(cellID, "rho");
     std::cout<<"--> Step global position: ("<<global.x()<<", "<<global.y()<<", "<<global.z()<<") ";
     std::cout<<" (theta, phi, rho) = "<<"("<<global.theta()<<", "<<global.phi()<<", "<<global.mag()<<") "<<std::endl;
-    std::cout<<"    local position: ("<<local.x()<<", "<<local.y()<<", "<<local.z()<<") "<<std::endl;
     std::cout<<"  phiID: "<<phiID<<", thetaID "<<thetaID<<", rhoID "<<rhoID<<", cellID "<<cellID<<std::endl;
     std::cout<<"  Cell position: ("<<HitCellPos.x()<<", "<<HitCellPos.y()<<", "<<HitCellPos.z()<<std::endl;
     std::cout<<" (theta, phi, rho) = "<<"("<<HitCellPos.theta()<<", "<<HitCellPos.phi()<<", "<<HitCellPos.mag()<<") "<<std::endl;
+    std::cout<<"  Neighbor cell count: "<<cellIDvec.size()<<std::endl;
+    responseSum = 0;
+    for(size_t i=0; i<cellIDvec.size(); ++i) {
+      phiID = m_segmentation->decoder()->get(cellIDvec[i], "phi");
+      thetaID = m_segmentation->decoder()->get(cellIDvec[i], "theta");
+      rhoID = m_segmentation->decoder()->get(cellIDvec[i], "rho");
+      std::cout<<"  Neighbor cell "<<i<<": phiID "<<phiID<<", thetaID "<<thetaID<<", rhoID "<<rhoID<<", cellID "<<cellIDvec[i]<<", response "<<responseVec[i]<<std::endl;
+      responseSum += responseVec[i];
+    }
+    std::cout<<"  Response sum: "<<responseSum<<std::endl;
 #endif
 
     // Create the hits and accumulate contributions from multiple steps
     //
     Geant4HitCollection* coll = collection(m_collectionID);
-    Geant4Calorimeter::Hit* hit = coll->findByKey<Geant4Calorimeter::Hit>(cellID); // the hit
+    for (std::size_t i = 0; i < cellIDvec.size(); ++i) {
+      const CellID hitCellID = cellIDvec[i];
+      G4double longitudinalAttenuation = 1.;
+      if (m_userData.fiberAttenuationLength > 0.) {
+        longitudinalAttenuation = std::exp(-(m_userData.outerRadius-global.perp()) / m_userData.fiberAttenuationLength);
+      }
+      const G4double step_E = responseVec[i] * longitudinalAttenuation * aStep->GetTotalEnergyDeposit();
+      Geant4Calorimeter::Hit* hit = coll->findByKey<Geant4Calorimeter::Hit>(hitCellID); // the hit
 
-    if (!hit) { // if the hit does not exist yet, create it
-      hit = new Geant4Calorimeter::Hit();
-
-      hit->cellID = cellID;
-      hit->position = HitCellPos; // this should be assigned only once
-      hit->energyDeposit = step_E;
-
-      // Add calo hit contributions
-      //
-      // Crete the first contribution associated to this hit
-      Geant4Calorimeter::Hit::Contribution contrib;
-      contrib.trackID = aStep->GetTrack()->GetTrackID();
-      contrib.pdgID = aStep->GetTrack()->GetParticleDefinition()->GetPDGEncoding();
-      contrib.deposit = step_E;
-      contrib.time = aStep->GetPreStepPoint()->GetGlobalTime();
-      contrib.x = global.x();
-      contrib.y = global.y();
-      contrib.z = global.z();
-      hit->truth.emplace_back(contrib);
-
-      coll->add(cellID, hit); // add the hit to the hit collection
-    } else {                 // if the hit exists already, increment its fields
-      hit->energyDeposit += step_E;
+      if (!hit) { // if the hit does not exist yet, create it
+        hit = new Geant4Calorimeter::Hit();
+        hit->cellID = hitCellID;
+        hit->position = cellPosVec[i]; // this should be assigned only once
+        hit->energyDeposit = step_E;
+        coll->add(hitCellID, hit); // add the hit to the hit collection
+      } else {                 // if the hit exists already, increment its fields
+        hit->energyDeposit += step_E;
+      }
 
       // Add calo hit contributions
-      //
-      // Add a new contribution associated to this hit
-      Geant4Calorimeter::Hit::Contribution contrib;
-      contrib.trackID = aStep->GetTrack()->GetTrackID();
-      contrib.pdgID = aStep->GetTrack()->GetParticleDefinition()->GetPDGEncoding();
-      contrib.deposit = step_E;
-      contrib.time = aStep->GetPreStepPoint()->GetGlobalTime();
-      contrib.x = global.x();
-      contrib.y = global.y();
-      contrib.z = global.z();
-      hit->truth.emplace_back(contrib);
+      if(i == 0) { // only save the truth info for the central cell to avoid duplication
+        Geant4Calorimeter::Hit::Contribution contrib;
+        contrib.trackID = aStep->GetTrack()->GetTrackID();
+        contrib.pdgID = aStep->GetTrack()->GetParticleDefinition()->GetPDGEncoding();
+        contrib.deposit = aStep->GetTotalEnergyDeposit();
+        contrib.time = aStep->GetPreStepPoint()->GetGlobalTime();
+        contrib.x = global.x();
+        contrib.y = global.y();
+        contrib.z = global.z();
+        hit->truth.emplace_back(contrib);
+      }
     }
 
     return true;
