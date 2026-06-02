@@ -20,6 +20,11 @@ cd ..
 
 # Next time when login to lxplus: 
 source setup.sh
+
+# To run an example of Grainita full simulation: 
+cd run
+ddsim --steeringFile fullsim_steering.py
+
 ```
 
 
