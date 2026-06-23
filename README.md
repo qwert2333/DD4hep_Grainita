@@ -17,6 +17,7 @@ cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=../install -Wno-dev
 make install -j 8
 cd ..
+k4_local_repo # update the local environment
 
 # Next time when login to lxplus: 
 source setup.sh
