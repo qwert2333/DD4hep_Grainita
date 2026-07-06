@@ -19,7 +19,7 @@ from Configurables import GeoSvc
 geoservice = GeoSvc("GeoSvc")
 path_to_detector = os.environ.get("dd4hep_grainita", "")
 print(path_to_detector)
-detectors_to_use=[ '../Grainita_ECAL/compact/OptLongSeg/Grainita_ECAL_Barrel_v02_Long4.xml' ]
+detectors_to_use=[ '../Grainita_ECAL/compact/Grainita_ECAL_Barrel_v02_Long4.xml' ]
 # prefix all xmls with path_to_detector
 geoservice.detectors = [os.path.join(path_to_detector, _det) for _det in detectors_to_use]
 geoservice.OutputLevel = INFO
@@ -91,7 +91,7 @@ application_mgr = ApplicationMgr(
         simplecali
     ],
     EvtSel = 'NONE',
-    EvtMax = 5,
+    EvtMax = 100,
     ExtSvc = [
         EventDataSvc("EventDataSvc"),
         geoservice,
