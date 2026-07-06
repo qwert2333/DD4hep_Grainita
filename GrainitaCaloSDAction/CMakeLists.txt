@@ -2,6 +2,7 @@ project(GrainitaCaloSDAction)
 
 file(GLOB sources
   ${PROJECT_SOURCE_DIR}/src/GrainitaCaloSDAction.cpp
+  ${PROJECT_SOURCE_DIR}/src/GrainitaCaloMatrixSDAction.cpp
 )
 
 file(GLOB headers
