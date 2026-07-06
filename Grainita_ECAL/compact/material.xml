@@ -1,5 +1,27 @@
 
-<materials>
+<lccdd>
+  <properties>
+    <!-- Default optical properties for the v02 mixed-grain material.
+         These are intentionally simple placeholders for enabling optical
+         photon production. They are only used when optical physics is enabled
+         in the steering file. Replace them with measured Grainita values when
+         available. -->
+    <matrix name="RI_MixGrains_Default" coldim="2" values="
+      1.0*eV 1.80
+      6.0*eV 1.80
+    "/>
+    <matrix name="AbsLen_MixGrains_Default" coldim="2" values="
+      1.0*eV 1.0*m
+      6.0*eV 1.0*m
+    "/>
+    <matrix name="ScintFast_MixGrains_Default" coldim="2" values="
+      1.5*eV 0.0
+      2.8*eV 1.0
+      4.5*eV 0.0
+    "/>
+  </properties>
+
+  <materials>
 
     <material name="Vacuum">
       <D type="density" unit="g/cm3" value="0.0000000001" />
@@ -30,9 +52,9 @@
 
     <material name="ZnWO4">
       <D type="density" unit="g/cm3" value="7.87" />
-      <composite n="1" ref="Zn" />    
-      <composite n="1" ref="W" />    
-      <composite n="4" ref="O" />    
+      <composite n="1" ref="Zn" />
+      <composite n="1" ref="W" />
+      <composite n="4" ref="O" />
     </material>
 
 
@@ -68,7 +90,7 @@
       <composite n="2" ref="O" />
     </material>
 
-    <!--Note: following material are defined by averaging grains, medium and fibers in 7mm pitch size 
+    <!--Note: following material are defined by averaging grains, medium and fibers in 7mm pitch size
       Fiber structure: WLS fiber r = 0.5 mm, with 0.02 mm thick PMMA cladding -->
 
     <material name="MixGrains">
@@ -77,6 +99,12 @@
       <fraction n="0.206890" ref="HeavyLiquid" />
       <fraction n="0.002979" ref="WLSFiber" />
       <fraction n="0.000274" ref="PMMA" />
+      <property name="RINDEX" ref="RI_MixGrains_Default"/>
+      <property name="ABSLENGTH" ref="AbsLen_MixGrains_Default"/>
+      <property name="SCINTILLATIONCOMPONENT1" ref="ScintFast_MixGrains_Default"/>
+      <constant name="SCINTILLATIONYIELD" value="10/MeV"/>
+      <constant name="SCINTILLATIONTIMECONSTANT1" value="5.0*ns"/>
+      <constant name="RESOLUTIONSCALE" value="1.0"/>
     </material>
 
     <material name="AirMixGrains">
@@ -104,5 +132,6 @@
       <fraction n="0.147499441912553" ref="O"/>
     </material>
 
-</materials>
+  </materials>
+</lccdd>
 
