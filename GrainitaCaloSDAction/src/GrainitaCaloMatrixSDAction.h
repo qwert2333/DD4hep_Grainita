@@ -1,5 +1,5 @@
-#ifndef GRAINITACALOSDACTION_H
-#define GRAINITACALOSDACTION_H 1
+#ifndef GRAINITACALO_MATRIX_SDACTION_H
+#define GRAINITACALO_MATRIX_SDACTION_H 1
 
 #include "DDG4/Geant4SensDetAction.h"
 
@@ -10,10 +10,10 @@
 namespace dd4hep {
 namespace sim {
 
-  class GrainitaCaloSDData {
+  class GrainitaCaloMatrixSDData {
   public:
-    GrainitaCaloSDData() = default;
-    ~GrainitaCaloSDData() = default;
+    GrainitaCaloMatrixSDData() = default;
+    ~GrainitaCaloMatrixSDData() = default;
 
     Geant4Sensitive* sensitive{};
     int rawCollectionID = 0;
@@ -44,7 +44,7 @@ namespace sim {
 
   };
 
-  using GrainitaCaloSDAction = Geant4SensitiveAction<GrainitaCaloSDData>;
+  using GrainitaCaloMatrixSDAction = Geant4SensitiveAction<GrainitaCaloMatrixSDData>;
 
 } // namespace sim
 } // namespace dd4hep

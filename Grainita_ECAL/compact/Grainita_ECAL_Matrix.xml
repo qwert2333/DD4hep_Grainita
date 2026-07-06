@@ -1,0 +1,67 @@
+<lccdd>
+  <info name="Grainita_ECAL_Matrix"
+    title="Grainita ECAL matrix prototype geometry"
+    author="Fangyi Guo"
+    url="None"
+    status="development"
+    version="0.1">
+    <comment>DD4hep port of Grainita_Module/src/construction.cc</comment>
+  </info>
+
+  <define>
+    <constant name="world_size" value="200*cm"/>
+    <constant name="world_x" value="world_size"/>
+    <constant name="world_y" value="world_size"/>
+    <constant name="world_z" value="world_size"/>
+
+    <!-- Geant4 defaults from Grainita_Module/src/construction.cc -->
+    <constant name="MatrixModuleHalfX"          value="3.5*cm"/>
+    <constant name="MatrixModuleHalfY"          value="3.5*cm"/>
+    <constant name="MatrixCrystalHalfZ"         value="5*cm"/>
+    <constant name="MatrixNBoxX"                value="1"/>
+    <constant name="MatrixNBoxY"                value="1"/>
+
+    <constant name="MatrixNFiberX"              value="10"/>
+    <constant name="MatrixNFiberY"              value="10"/>
+    <constant name="MatrixNZSegments"           value="1"/>
+    <constant name="MatrixFiberRadius"          value="0.5*mm"/>
+    <constant name="MatrixCladdingL1Thickness"  value="0.01*mm"/>
+    <constant name="MatrixCladdingL2Thickness"  value="0.01*mm"/>
+    <constant name="MatrixCarbonFrameThickness" value="0.5*mm"/>
+    <constant name="MatrixFiberLength"          value="2*MatrixCrystalHalfZ + 1*cm"/>
+
+  </define>
+
+  <includes>
+    <gdmlFile ref="elements.xml"/>
+    <gdmlFile ref="material.xml"/>
+  </includes>
+
+  <display>
+    <vis name="Invisible"        alpha="0.0" r="0.0"   g="0.0"   b="0.0" showDaughters="false" visible="false"/>
+    <vis name="SeeThrough"       alpha="0.0" r="0.0"   g="0.0"   b="0.0" showDaughters="true"  visible="false"/>
+    <vis name="CaloVis"          alpha="1.0" r="0.0"   g="1.0"   b="0.0" showDaughters="true"  visible="true"/>
+    <vis name="CarbonFrameVis"   alpha="1.0" r="0.375" g="0.375" b="0.375" showDaughters="true" visible="false"/>
+    <vis name="SensitiveVis"     alpha="1.0" r="0.4"   g="0.7"   b="1.0" showDaughters="false" visible="true"/>
+    <vis name="WLSFiberVis"      alpha="1.0" r="1.0"   g="0.3"   b="0.2" showDaughters="true"  visible="true"/>
+    <vis name="FiberCladdingVis" alpha="1.0" r="1.0"   g="0.6"   b="0.2" showDaughters="true"  visible="true"/>
+  </display>
+
+  <detectors>
+    <detector name="Grainita_ECAL_Matrix" type="Grainita_ECAL_Matrix"
+              vis="CaloVis" id="10" readout="GrainitaEcalMatrixRO"
+              material="MixGrains">
+      <type_flags type="DetType_CALORIMETER + DetType_ELECTROMAGNETIC"/>
+    </detector>
+  </detectors>
+
+  <readouts>
+    <readout name="GrainitaEcalMatrixRO">
+      <!-- <segmentation type="CartesianGridXYZ"
+                    grid_size_x="2*(MatrixModuleHalfX/MatrixNBoxX - MatrixCarbonFrameThickness)/MatrixNFiberX"
+                    grid_size_y="2*(MatrixModuleHalfY/MatrixNBoxY - MatrixCarbonFrameThickness)/MatrixNFiberY"
+                    grid_size_z="2*MatrixCrystalHalfZ/MatrixNZSegments"/> -->
+      <id>system:5,box:5,component:4,layer:5,row:4,column:4,x:-14,y:-14,z:-9</id>
+    </readout>
+  </readouts>
+</lccdd>

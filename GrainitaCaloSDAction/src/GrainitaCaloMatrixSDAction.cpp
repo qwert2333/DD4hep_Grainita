@@ -1,5 +1,5 @@
-#ifndef GRAINITACALOSDACTION_C
-#define GRAINITACALOSDACTION_C 1
+#ifndef GRAINITACALO_MATRIX_SDACTION_C
+#define GRAINITACALO_MATRIX_SDACTION_C 1
 #endif
 
 /*
@@ -21,7 +21,7 @@
  * limitations under the License.
  */
 
-#include "GrainitaCaloSDAction.h"
+#include "GrainitaCaloMatrixSDAction.h"
 #include "detectorSegmentations/FCCSWModularGridRhoPhiTheta_k4geo.h"
 #include "detectorSegmentations/FCCSWGridPhiTheta_k4geo.h"
 #include "DD4hep/Segmentations.h"
@@ -47,7 +47,7 @@ namespace dd4hep {
 namespace sim {
 
   template <>
-  Geant4SensitiveAction<GrainitaCaloSDData>::Geant4SensitiveAction(Geant4Context* ctxt, const std::string& nam,
+  Geant4SensitiveAction<GrainitaCaloMatrixSDData>::Geant4SensitiveAction(Geant4Context* ctxt, const std::string& nam,
                                                                     DetElement det, Detector& desc)
       : Geant4Sensitive(ctxt, nam, det, desc), m_collectionName(), m_collectionID(0) {
     declareProperty("ReadoutName", m_readoutName);
@@ -72,7 +72,7 @@ namespace sim {
   // Function template specialization of Geant4SensitiveAction class.
   // Define actions
   template <>
-  void Geant4SensitiveAction<GrainitaCaloSDData>::initialize() {
+  void Geant4SensitiveAction<GrainitaCaloMatrixSDData>::initialize() {
     m_userData.sensitive = this;
     m_hitCreationMode = HitCreationFlags::DETAILED_MODE;
   }
@@ -80,7 +80,7 @@ namespace sim {
   // Function template specialization of Geant4SensitiveAction class.
   // Define collections created by this sensitivie action object
   template <>
-  void Geant4SensitiveAction<GrainitaCaloSDData>::defineCollections() {
+  void Geant4SensitiveAction<GrainitaCaloMatrixSDData>::defineCollections() {
     m_collectionID = defineCollection<Geant4Calorimeter::Hit>(m_collectionName);
     m_userData.rawCollectionID = defineCollection<Geant4Calorimeter::Hit>(m_userData.rawCollectionName);
   }
@@ -88,7 +88,7 @@ namespace sim {
   // Function template specialization of Geant4SensitiveAction class.
   // Method that accesses the G4Step object at each track step.
   template <>
-  bool Geant4SensitiveAction<GrainitaCaloSDData>::process(const G4Step* aStep, G4TouchableHistory* /*history*/) {
+  bool Geant4SensitiveAction<GrainitaCaloMatrixSDData>::process(const G4Step* aStep, G4TouchableHistory* /*history*/) {
 
 #ifdef DEBUG
     std::cout << "-------------------------------" << std::endl;
@@ -169,13 +169,12 @@ namespace sim {
     rawContrib.z = global.z();
     rawHit->truth.emplace_back(rawContrib);
 
-    // auto modularSeg = dynamic_cast<const dd4hep::DDSegmentation::FCCSWModularGridRhoPhiTheta_k4geo*>(m_segmentation->segmentation);
-    auto phiThetaSeg = dynamic_cast<const dd4hep::DDSegmentation::FCCSWGridPhiTheta_k4geo*>(m_segmentation->segmentation);
-    const int phiIndex = decoder->index("phi");
-    const int thetaIndex = decoder->index("theta");
-    const int phiBins = phiThetaSeg ? phiThetaSeg->phiBins() : 0;
-    const int currentPhiID = static_cast<int>(decoder->get(cellID, phiIndex));
-    const int currentThetaID = static_cast<int>(decoder->get(cellID, thetaIndex));
+    const int xIndex = decoder->index("x");
+    const int zIndex = decoder->index("z");
+    const int yIndex = decoder->index("y");
+    const int currentXID = static_cast<int>(decoder->get(cellID, xIndex));
+    const int currentZID = static_cast<int>(decoder->get(cellID, zIndex));
+    const int currentYID = static_cast<int>(decoder->get(cellID, yIndex));
     const int neighborSize = std::max(1, m_userData.neighborCellSize);
     const int neighborRadius = neighborSize / 2;
 
@@ -197,30 +196,16 @@ namespace sim {
 
     addCell(cellID);
     if(m_userData.useLightResponseFunction){
-      for (int dPhi = -neighborRadius; dPhi <= neighborRadius; ++dPhi) {
-        for (int dTheta = -neighborRadius; dTheta <= neighborRadius; ++dTheta) {
-          if (dPhi == 0 && dTheta == 0) {
+      for (int dX = -neighborRadius; dX <= neighborRadius; ++dX) {
+        for (int dZ = -neighborRadius; dZ <= neighborRadius; ++dZ) {
+          if (dX == 0 && dZ == 0) {
             continue;
           }
-
-          int neighborPhiID = currentPhiID + dPhi;
-          if (phiBins > 0) {
-            while (neighborPhiID >= phiBins) {
-              neighborPhiID -= phiBins;
-            }
-            while (neighborPhiID < 0) {
-              neighborPhiID += phiBins;
-            }
-          } else {
-            std::cout << "Error: phiBins is not well defined: " << phiBins << ". Cannot apply periodic boundary conditions." << std::endl;
-            continue;
-          }
-
-          const int neighborThetaID = currentThetaID + dTheta;
 
           CellID neighborCellID = cellID;
-          decoder->set(neighborCellID, phiIndex, neighborPhiID);
-          decoder->set(neighborCellID, thetaIndex, neighborThetaID);
+          decoder->set(neighborCellID, xIndex, currentXID + dX);
+          decoder->set(neighborCellID, zIndex, currentZID + dZ);
+          decoder->set(neighborCellID, yIndex, currentYID);
           addCell(neighborCellID);
         }
       }
@@ -265,21 +250,19 @@ namespace sim {
     // }
 
 #ifdef DEBUG
-    auto phiID = m_segmentation->decoder()->get(cellID, "phi");
-    auto thetaID = m_segmentation->decoder()->get(cellID, "theta");
-    auto rhoID = m_segmentation->decoder()->get(cellID, "rho");
+    auto xID = m_segmentation->decoder()->get(cellID, "x");
+    auto zID = m_segmentation->decoder()->get(cellID, "z");
+    auto yID = m_segmentation->decoder()->get(cellID, "y");
     std::cout<<"--> Step global position: ("<<global.x()<<", "<<global.y()<<", "<<global.z()<<") ";
-    std::cout<<" (theta, phi, rho) = "<<"("<<global.theta()<<", "<<global.phi()<<", "<<global.mag()<<") "<<std::endl;
-    std::cout<<"  phiID: "<<phiID<<", thetaID "<<thetaID<<", rhoID "<<rhoID<<", cellID "<<cellID<<std::endl;
+    std::cout<<"  xID: "<<xID<<", zID "<<zID<<", yID "<<yID<<", cellID "<<cellID<<std::endl;
     std::cout<<"  Cell position: ("<<HitCellPos.x()<<", "<<HitCellPos.y()<<", "<<HitCellPos.z()<<std::endl;
-    std::cout<<" (theta, phi, rho) = "<<"("<<HitCellPos.theta()<<", "<<HitCellPos.phi()<<", "<<HitCellPos.mag()<<") "<<std::endl;
     std::cout<<"  Neighbor cell count: "<<cellIDvec.size()<<std::endl;
     double responseSum = 0;
     for(size_t i=0; i<cellIDvec.size(); ++i) {
-      phiID = m_segmentation->decoder()->get(cellIDvec[i], "phi");
-      thetaID = m_segmentation->decoder()->get(cellIDvec[i], "theta");
-      rhoID = m_segmentation->decoder()->get(cellIDvec[i], "rho");
-      std::cout<<"  Neighbor cell "<<i<<": phiID "<<phiID<<", thetaID "<<thetaID<<", rhoID "<<rhoID<<", cellID "<<cellIDvec[i]<<", response "<<responseVec[i]<<std::endl;
+      xID = m_segmentation->decoder()->get(cellIDvec[i], "x");
+      zID = m_segmentation->decoder()->get(cellIDvec[i], "z");
+      yID = m_segmentation->decoder()->get(cellIDvec[i], "y");
+      std::cout<<"  Neighbor cell "<<i<<": xID "<<xID<<", zID "<<zID<<", yID "<<yID<<", cellID "<<cellIDvec[i]<<", response "<<responseVec[i]<<std::endl;
       responseSum += responseVec[i];
     }
     std::cout<<"  Response sum: "<<responseSum<<std::endl;
@@ -329,7 +312,7 @@ namespace sim {
 } // namespace sim
 } // namespace dd4hep
 
-DECLARE_GEANT4SENSITIVE(GrainitaCaloSDAction)
+DECLARE_GEANT4SENSITIVE(GrainitaCaloMatrixSDAction)
 
 //**************************************************************************
 

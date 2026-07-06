@@ -7,6 +7,7 @@ project(Grainita_ECAL)
 set(GRAINITA_ECAL_SOURCES
   ${CMAKE_CURRENT_SOURCE_DIR}/src/Grainita_ECAL_Barrel_v01.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/Grainita_ECAL_Barrel_v02.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/Grainita_ECAL_Matrix.cpp
 #  ${CMAKE_CURRENT_SOURCE_DIR}/src/Grainita_ECAL_Barrel_v03.cpp
 )
 
