@@ -8,7 +8,7 @@ ENABLE_OPTICAL_PHOTON_PRODUCTION = False
 
 
 ## The compact XML file, or multiple compact files, if the last one is the closer.
-SIM.compactFile = ["../Grainita_ECAL/compact/Grainita_ECAL_Barrel_v02.xml"]
+SIM.compactFile = ["../Grainita_ECAL/compact/Grainita_ECAL_Barrel_v02_Long4.xml"]
 ## Lorentz boost for the crossing angle, in radian!
 SIM.crossingAngleBoost = 0.0
 SIM.enableDetailedShowerMode = False
@@ -21,9 +21,9 @@ SIM.inputFiles = []
 ## Macro file to execute for runType 'run' or 'vis'
 SIM.macroFile = ""
 ## number of events to simulate, used in batch mode
-SIM.numberOfEvents = 10
+SIM.numberOfEvents = 100
 ## Outputfile from the simulation: .slcio, edm4hep.root and .root output files are supported
-SIM.outputFile = "CaloSim_gamma_5GeV_theta60-120_phi0-360.root"
+SIM.outputFile = "CaloSim_gamma_5GeV_theta85-95_phi80-100.root"
 ## Physics list to use in simulation
 SIM.physicsList = None
 ## Verbosity use integers from 1(most) to 7(least) verbose
@@ -290,11 +290,6 @@ SIM.gun.direction = (0., 1., 0.)
 ##
 SIM.gun.distribution = 'uniform'
 
-## Total energy (including mass) for the particle gun.
-##
-## If not None, it will overwrite the setting of momentumMin and momentumMax
-SIM.gun.energy = 5.0*GeV
-
 ## Maximal pseudorapidity for random distibution (overrides thetaMin)
 SIM.gun.etaMax = None
 
@@ -316,20 +311,25 @@ SIM.gun.isotrop = False
 SIM.gun.multiplicity = 1
 SIM.gun.particle = "gamma"
 
+## Total energy (including mass) for the particle gun.
+##
+## If not None, it will overwrite the setting of momentumMin and momentumMax
+SIM.gun.energy = 5.0*GeV
+
 ## Minimal azimuthal angle for random distribution
-SIM.gun.phiMin = 0.*math.pi/180.
+SIM.gun.phiMin = 80.*math.pi/180.
 
 ## Maximal azimuthal angle for random distribution
-SIM.gun.phiMax = 360.*math.pi/180.
+SIM.gun.phiMax = 100.*math.pi/180.
+
+## Minimal polar angle for random distribution
+SIM.gun.thetaMin = 85*math.pi/180.
+
+## Maximal polar angle for random distribution
+SIM.gun.thetaMax = 95*math.pi/180.
 
 ##  position of the particle gun, 3 vector
 SIM.gun.position = (0.0, 0.0, 0.0)
-
-## Minimal polar angle for random distribution
-SIM.gun.thetaMin = 60*math.pi/180.
-
-## Maximal polar angle for random distribution
-SIM.gun.thetaMax = 120*math.pi/180.
 
 
 ################################################################################

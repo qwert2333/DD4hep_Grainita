@@ -199,28 +199,29 @@ StatusCode SimpleSiPMDigiAlg::execute(const EventContext&) const
 				Rndm::Numbers rndm_pois(m_randSvc, Rndm::Poisson(hit_E * dd4hep::GeV / dd4hep::MeV  * _CryLY.value()));
 				ScinGen = std::round(rndm_pois.shoot());
 
-				// std::cout << "Primary scintillating photons: "<<ScinGen<<" = ( hit E "<<hit_E * dd4hep::GeV / dd4hep::MeV <<" MeV * LY "<<_CryLY.value()<< " )" << std::endl;
 				// SiPM dark noise and cross talk
-				int darkcounts_mean = Rndm::Numbers(m_randSvc, Rndm::Poisson(_SiPMDCR.value() * _timeWindow.value())).shoot();
-				darkcounts_CT = 0;
-				for(int i=0;i<darkcounts_mean;i++)
-				{
-					double darkcounts_rdm = Rndm::Numbers(m_randSvc, Rndm::Flat(0, 1)).shoot();
-					int sum_darkcounts = 1;
-					if(! (darkcounts_rdm <= f_DarkNoise->Eval(sum_darkcounts)))
-					{
-						float prob = f_DarkNoise->Eval(sum_darkcounts);
-						while(darkcounts_rdm > prob)
-						{
-							sum_darkcounts++;
-							prob += f_DarkNoise->Eval(sum_darkcounts);
-						}
-					}
-					darkcounts_CT += sum_darkcounts;
-				}
+				// TODO: the dark count + cross talk and saturation model are not validated yet. 
+				//
+			  //int darkcounts_mean = Rndm::Numbers(m_randSvc, Rndm::Poisson(_SiPMDCR.value() * _timeWindow.value())).shoot();
+			  //darkcounts_CT = 0;
+			  //for(int i=0;i<darkcounts_mean;i++)
+			  //{
+			  //	double darkcounts_rdm = Rndm::Numbers(m_randSvc, Rndm::Flat(0, 1)).shoot();
+			  //	int sum_darkcounts = 1;
+			  //	if(! (darkcounts_rdm <= f_DarkNoise->Eval(sum_darkcounts)))
+			  //	{
+			  //		float prob = f_DarkNoise->Eval(sum_darkcounts);
+			  //		while(darkcounts_rdm > prob)
+			  //		{
+			  //			sum_darkcounts++;
+			  //			prob += f_DarkNoise->Eval(sum_darkcounts);
+			  //		}
+			  //	}
+			  //	darkcounts_CT += sum_darkcounts;
+			  //}
 
 				// std::cout << "Dark count: "<<darkcounts_CT<<std::endl;
-				ScinGen += darkcounts_CT;
+				// ScinGen += darkcounts_CT;
 
 				// Npe_SiPM = std::round(_Pixel.value() * (1.0 - TMath::Exp(-ScinGen * 1.0 / _Pixel.value())));
 				Npe_SiPM = ScinGen; // Ignore the SiPM saturation effect for now.
