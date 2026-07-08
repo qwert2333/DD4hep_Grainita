@@ -111,9 +111,6 @@ static Ref_t create_detector(Detector &description, xml_h e,
   fiberCladL1Vol.setVisAttributes(description, "FiberCladdingVis");
   fiberCladL2Vol.setVisAttributes(description, "FiberCladdingVis");
 
-  const int cellMax = std::max({nfiber_x, nfiber_y, nseg_z});
-  const int cellCopyScale = static_cast<int>(std::pow(10., std::to_string(cellMax).length()));
-
   std::vector<Position> fiberPositions;
   fiberPositions.reserve(nfiber_x * nfiber_y);
 
@@ -125,14 +122,12 @@ static Ref_t create_detector(Detector &description, xml_h e,
     const double z = z0_cell + iz * 2. * cell_half_z;
     for (int iy = 0; iy < nfiber_y; ++iy) {
       const double y = y0_cell + iy * 2. * cell_half_y;
-      int copyNo = (iz + 1) * cellCopyScale * cellCopyScale + (iy + 1) * cellCopyScale;
       for (int ix = 0; ix < nfiber_x; ++ix) {
         const double x = x0_cell + ix * 2. * cell_half_x;
         PlacedVolume cellPV = boxVol.placeVolume(crystalCellVol, Position(x, y, z));
         cellPV.addPhysVolID("layer", iz);
         cellPV.addPhysVolID("row", iy);
         cellPV.addPhysVolID("column", ix);
-        cellPV.addPhysVolID("cell", ++copyNo);
         if (iz == 0) {
           fiberPositions.emplace_back(x, y, 0.);
         }
