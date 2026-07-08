@@ -1,0 +1,3 @@
+[submodule "k4Clue"]
+	path = k4Clue
+	url = git@github.com:qwert2333/k4Clue.git

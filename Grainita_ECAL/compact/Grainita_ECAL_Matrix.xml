@@ -15,14 +15,14 @@
     <constant name="world_z" value="world_size"/>
 
     <!-- Geant4 defaults from Grainita_Module/src/construction.cc -->
-    <constant name="MatrixModuleHalfX"          value="3.5*cm"/>
-    <constant name="MatrixModuleHalfY"          value="3.5*cm"/>
-    <constant name="MatrixCrystalHalfZ"         value="5*cm"/>
+    <constant name="MatrixModuleHalfX"          value="35.05*cm"/>
+    <constant name="MatrixModuleHalfY"          value="35.05*cm"/>
+    <constant name="MatrixCrystalHalfZ"         value="20*cm"/>
     <constant name="MatrixNBoxX"                value="1"/>
     <constant name="MatrixNBoxY"                value="1"/>
 
-    <constant name="MatrixNFiberX"              value="10"/>
-    <constant name="MatrixNFiberY"              value="10"/>
+    <constant name="MatrixNFiberX"              value="100"/>
+    <constant name="MatrixNFiberY"              value="100"/>
     <constant name="MatrixNZSegments"           value="1"/>
     <constant name="MatrixFiberRadius"          value="0.5*mm"/>
     <constant name="MatrixCladdingL1Thickness"  value="0.01*mm"/>
@@ -61,7 +61,7 @@
                     grid_size_x="2*(MatrixModuleHalfX/MatrixNBoxX - MatrixCarbonFrameThickness)/MatrixNFiberX"
                     grid_size_y="2*(MatrixModuleHalfY/MatrixNBoxY - MatrixCarbonFrameThickness)/MatrixNFiberY"
                     grid_size_z="2*MatrixCrystalHalfZ/MatrixNZSegments"/> -->
-      <id>system:5,box:5,component:4,layer:5,row:4,column:4,x:-14,y:-14,z:-9</id>
+      <id>system:5,box:5,component:4,layer:5,row:8,column:8,box_x:-3,box_y:-3</id>
     </readout>
   </readouts>
 </lccdd>
