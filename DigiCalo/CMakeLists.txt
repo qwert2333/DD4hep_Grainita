@@ -15,7 +15,7 @@ gaudi_add_module(CaloDigi
   SOURCES
     src/SimpleSiPMDigiAlg.cpp
     src/SimpleCalibAlg.cpp
-    #src/SimulateSiPMwithEdep.cpp
+    src/SimulateSiPMwithEdep.cpp
   LINK
     k4FWCore::k4FWCore
     k4FWCore::k4Interface
