@@ -123,7 +123,7 @@ SIM.action.mapActions = {
     'Grainita_ECAL_Barrel_v02': (
         "GrainitaCaloSDAction",
         {
-            "ReadoutName": "GrainitaECALReadout",
+            "ReadoutName": "GrainitaEcalBarrelRO",
             "CollectionName": "GrainitaCalorimeterHits",
             "useLightResponseFunction":True,
             "responseFuncSlope": 0.93,
@@ -131,7 +131,7 @@ SIM.action.mapActions = {
             "responseFuncX0": 0.856,
             "responseFuncAttLength": 3.4,
             "neighborCellSize": 5,
-            "fiberAttenuationLength": 1000,
+            "fiberAttenuationLength": 1e7,
             "outerRadius": 2645,
         }
     )
