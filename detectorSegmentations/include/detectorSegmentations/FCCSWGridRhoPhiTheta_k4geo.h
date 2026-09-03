@@ -38,7 +38,12 @@ namespace DDSegmentation {
      */
     virtual CellID cellID(const Vector3D& aLocalPosition, const Vector3D& aGlobalPosition,
                           const VolumeID& aVolumeID) const override;
- 
+
+    /** Add the face-sharing neighbours in rho, phi and theta.
+     *  Phi neighbours wrap around at 2 pi; rho and theta do not.
+     */
+    virtual void neighbours(const CellID& cellID, std::set<CellID>& neighbours) const override;
+
 
     /**  Find neighbours of the cell.
      *   Definition of neighbours is explained on slide 9:
@@ -59,13 +64,25 @@ namespace DDSegmentation {
     double rho(const CellID cID) const;
 
   private:
+    /// Clear all CellID fields except system, phi, theta and rho when enabled.
+    void clearExtraFields(CellID& cellID) const;
+
     /// the grid size in rho
     double m_grid_rho;
     std::vector<double> m_rhoBins;
+    /// number of bins for a uniform rho grid (0 keeps the legacy field-range fallback)
+    int m_rhoBinCount;
+
+    /// physical theta coverage of the segmented detector
+    double m_minTheta;
+    double m_maxTheta;
+
+    /// whether placement and other non-grid CellID fields are cleared
+    bool m_clearExtraFields;
 
     /// the coordinate offset in rho / R
-    double m_offsetR;   // In cylinder case: offset depends on R not rho. 
-    double m_offsetrho; 
+    double m_offsetR;   // In cylinder case: offset depends on R not rho.
+    double m_offsetrho;
 
     /// the field name used for rho
     std::string m_rhoID;
