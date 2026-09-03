@@ -174,6 +174,12 @@ namespace sim {
     const int phiIndex = decoder->index("phi");
     const int thetaIndex = decoder->index("theta");
     const int phiBins = phiThetaSeg ? phiThetaSeg->phiBins() : 0;
+    // cellID() encodes atan2(phi) in the periodic interval whose first bin contains -pi.
+    const int firstPhiID = phiThetaSeg
+                               ? static_cast<int>(std::floor(
+                                     (-M_PI + 0.5 * phiThetaSeg->gridSizePhi() - phiThetaSeg->offsetPhi()) /
+                                     phiThetaSeg->gridSizePhi()))
+                               : 0;
     const int currentPhiID = static_cast<int>(decoder->get(cellID, phiIndex));
     const int currentThetaID = static_cast<int>(decoder->get(cellID, thetaIndex));
     const int neighborSize = std::max(1, m_userData.neighborCellSize);
@@ -205,12 +211,8 @@ namespace sim {
 
           int neighborPhiID = currentPhiID + dPhi;
           if (phiBins > 0) {
-            while (neighborPhiID >= phiBins) {
-              neighborPhiID -= phiBins;
-            }
-            while (neighborPhiID < 0) {
-              neighborPhiID += phiBins;
-            }
+            const int relativePhiID = neighborPhiID - firstPhiID;
+            neighborPhiID = firstPhiID + (relativePhiID % phiBins + phiBins) % phiBins;
           } else {
             std::cout << "Error: phiBins is not well defined: " << phiBins << ". Cannot apply periodic boundary conditions." << std::endl;
             continue;
@@ -310,17 +312,19 @@ namespace sim {
       }
 
       // Add calo hit contributions
+      // Note: Only add contribution for the central cell, to reduce the file size. 
+      if(i==0){
         Geant4Calorimeter::Hit::Contribution contrib;
         contrib.trackID = aStep->GetTrack()->GetTrackID();
         contrib.pdgID = aStep->GetTrack()->GetParticleDefinition()->GetPDGEncoding();
-        //contrib.deposit = aStep->GetTotalEnergyDeposit()*responseVec_Norm[i];
-        contrib.deposit = step_E; 
+        contrib.deposit = aStep->GetTotalEnergyDeposit();
+        // contrib.deposit = step_E; 
         contrib.time = aStep->GetPreStepPoint()->GetGlobalTime();
         contrib.x = global.x();
         contrib.y = global.y();
         contrib.z = global.z();
         hit->truth.emplace_back(contrib);
-      
+      }
     }
 
     return true;
@@ -332,4 +336,3 @@ namespace sim {
 DECLARE_GEANT4SENSITIVE(GrainitaCaloSDAction)
 
 //**************************************************************************
-
