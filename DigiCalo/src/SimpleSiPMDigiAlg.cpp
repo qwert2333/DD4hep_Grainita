@@ -71,7 +71,7 @@ StatusCode SimpleSiPMDigiAlg::initialize()
 		t_DigiHit->Branch("digiHit_x", &m_digiHit_x);
 		t_DigiHit->Branch("digiHit_y", &m_digiHit_y);
 		t_DigiHit->Branch("digiHit_z", &m_digiHit_z);
-		t_DigiHit->Branch("digiHit_T1", &m_digiHit_T);
+		t_DigiHit->Branch("digiHit_T", &m_digiHit_T);
 		t_DigiHit->Branch("digiHit_E_truth", &m_digiHit_E_truth);
 		t_DigiHit->Branch("digiHit_E_digi", &m_digiHit_E_digi);
 		t_DigiHit->Branch("digiHit_ADC", &m_digiHit_ADC);
@@ -143,21 +143,21 @@ StatusCode SimpleSiPMDigiAlg::execute(const EventContext&) const
 			// std::cout << "  Hit energy: " << hit_E << ", step size " << SimHit.contributions_size() << std::endl;
 
 			const auto loopStepStart = Clock::now();
-			for (auto contrib = SimHit.contributions_begin(); contrib != SimHit.contributions_end(); ++contrib) {
+		  for (auto contrib = SimHit.contributions_begin(); contrib != SimHit.contributions_end(); ++contrib) {
       	const double edep = contrib->getEnergy() * dd4hep::GeV;
-				TVector3 stepPos(contrib->getStepPosition().x * dd4hep::mm, contrib->getStepPosition().y * dd4hep::mm, contrib->getStepPosition().z * dd4hep::mm);
+		  	TVector3 stepPos(contrib->getStepPosition().x * dd4hep::mm, contrib->getStepPosition().y * dd4hep::mm, contrib->getStepPosition().z * dd4hep::mm);
 
 
-				Rndm::Numbers rndm_exp(m_randSvc, Rndm::Exponential(_scintDecaytime.value()));
-				double init_time = contrib->getTime();
-				double transport_time = fabs(_outerR.value() - stepPos.Perp()) / (dd4hep::c_light / _refractiveIndex.value());
-				double scint_time = rndm_exp.shoot();
+		  	Rndm::Numbers rndm_exp(m_randSvc, Rndm::Exponential(_scintDecaytime.value()));
+		  	double init_time = contrib->getTime();
+		  	double transport_time = fabs(_outerR.value() - stepPos.Perp()) / (dd4hep::c_light / _refractiveIndex.value());
+		  	double scint_time = rndm_exp.shoot();
 
-				step_TimeEnergy.emplace_back(init_time + transport_time + scint_time, edep);
+		  	step_TimeEnergy.emplace_back(init_time + transport_time + scint_time, edep);
 
-				auto mcp = contrib->getParticle();
-				MCPEnMap[mcp] += edep;
-			}
+		  	auto mcp = contrib->getParticle();
+		  	MCPEnMap[mcp] += edep;
+		  }
 			loopStepTime += Seconds(Clock::now() - loopStepStart).count();
 
 			// std::cout << "  After looping steps: E-T pair size " << step_TimeEnergy.size() << ". Start to sort " << std::endl;
@@ -198,6 +198,8 @@ StatusCode SimpleSiPMDigiAlg::execute(const EventContext&) const
 
 				Rndm::Numbers rndm_pois(m_randSvc, Rndm::Poisson(hit_E * dd4hep::GeV / dd4hep::MeV  * _CryLY.value()));
 				ScinGen = std::round(rndm_pois.shoot());
+
+
 
 				// SiPM dark noise and cross talk
 				// TODO: the dark count + cross talk and saturation model are not validated yet. 
@@ -315,8 +317,16 @@ StatusCode SimpleSiPMDigiAlg::execute(const EventContext&) const
 				m_digiHit_E_digi.push_back(caliE);
 				m_digiHit_ADC.push_back(integralADC);
 				m_digiHit_Npe.push_back(Npe_SiPM);
-
 				m_digiHit_SiPMDC.push_back(darkcounts_CT);
+
+				auto m_decoder = m_segmentation->decoder();
+				auto cellID = SimHit.getCellID();
+				m_digiHit_stave.push_back(static_cast<int>(m_decoder->get(cellID, "stave")));
+				m_digiHit_sector.push_back(static_cast<int>(m_decoder->get(cellID, "sector")));
+				m_digiHit_rho.push_back(static_cast<int>(m_decoder->get(cellID, "rho")));
+				m_digiHit_theta.push_back(static_cast<int>(m_decoder->get(cellID, "theta")));
+				m_digiHit_phi.push_back(static_cast<int>(m_decoder->get(cellID, "phi")));
+
 			}
 		}
 
@@ -333,13 +343,13 @@ StatusCode SimpleSiPMDigiAlg::execute(const EventContext&) const
 	debug() << "Total Truth Energy: " << totE_Truth << endmsg;
 	debug() << "Total Digi Energy: " << totE_Digi << endmsg;
 
-	// const double totalHitCalcTime = loopStepTime + sortETPairTime + siPMDigiTime;
-	// std::cout << "Event " << _nEvt << " timing: "
-	//           << "loop step time = " << loopStepTime * 1000. << " ms, "
-	//           << "sort E-T pair time = " << sortETPairTime * 1000. << " ms, "
-	//           << "SiPM digi time = " << siPMDigiTime * 1000. << " ms, "
-	//           << "total time = " << totalHitCalcTime * 1000. << " ms"
-	//           << std::endl;
+	 //const double totalHitCalcTime = loopStepTime + sortETPairTime + siPMDigiTime;
+	 //std::cout << "Event " << _nEvt << " timing: "
+	 //          << "loop step time = " << loopStepTime * 1000. << " ms, "
+	 //          << "sort E-T pair time = " << sortETPairTime * 1000. << " ms, "
+	 //          << "SiPM digi time = " << siPMDigiTime * 1000. << " ms, "
+	 //          << "total time = " << totalHitCalcTime * 1000. << " ms"
+	 //          << std::endl;
 
 	// yyy_enddigi = clock();
 	// double duration_digi = double(yyy_enddigi - yyy_start) / CLOCKS_PER_SEC;
